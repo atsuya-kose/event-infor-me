@@ -1,163 +1,376 @@
 // イベントデータ。ここだけ更新すればサイトに反映されます。
-// end が null のものは終了日が未確認です(終了日が分かり次第追記)。
-// categories: "family"(家族) / "gourmet"(グルメ)
+// zone: "local"(杉並区・世田谷区・吉祥寺/武蔵野・三鷹・西東京周辺) / "tokyo"(それ以外の東京都内) / "kanto"(関東近郊)
+// end が null のものは終了日が未確認です。
+// categories: "family"(家族向け) / "gourmet"(グルメ要素あり)
 window.LAST_UPDATED = "2026-11-11";
 
 window.EVENTS = [
+  // ===== 杉並区・世田谷区・吉祥寺周辺 =====
   {
-    id: "minatomirai-winter-2026",
-    title: "横浜・みなとみらい Winter Holiday 2026",
-    start: "2026-11-11",
-    end: "2027-01-11",
-    area: "神奈川",
-    venue: "横浜ランドマークタワー、MARK IS みなとみらいほか(横浜市)",
-    price: "記載なし(公式で確認)",
-    categories: ["family", "gourmet"],
-    summary: "ドラクエ×FFの冬のファンタジー。巨大な「スライムとチョコボ」オブジェやフォトスポット、スタンプラリー、コラボカフェ「スラチョコキッチン」(Cafe Fan Base)。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
-  },
-  {
-    id: "moomin-nyoronyoro-2026",
-    title: "超ニョロニョロフェスタ2026",
-    start: "2026-11-11",
-    end: "2026-11-15",
-    area: "埼玉",
-    venue: "ムーミンバレーパーク(飯能市)",
-    price: "ナイトパス 11/11限定1,100円(通常2,500円)ほか",
+    id: "setabun-jazz-0sai-2026",
+    title: "0才からのジャズコンサート 世田谷 2026",
+    start: "2026-11-11", end: "2026-11-11",
+    zone: "local", area: "世田谷区",
+    venue: "世田谷文学館(南烏山1-10-10)/京王線芦花公園駅から徒歩5分",
+    price: "大人1,800円、子ども(0歳〜小学生)300円(当日は各+500円)",
     categories: ["family"],
-    summary: "ニョロニョロ体験、湖上花火(11・14・15日)、バルーンで帽子を作るワークショップ。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    summary: "赤ちゃんから大人まで楽しめるジャズ。午前10:30〜と午後15:30〜の2回。ベビーカー置場・授乳コーナー・おむつ替えコーナーあり。",
+    url: "https://iko-yo.net/events/601853", source: "いこーよ"
   },
+  {
+    id: "suginami-ehon-live-amanuma-2026",
+    title: "「絵本ライブ天沼」対話式でおはなし会",
+    start: "2026-11-13", end: "2026-11-13",
+    zone: "local", area: "杉並区",
+    venue: "子ども・子育てプラザ天沼 マルチルーム(天沼3-19-16)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "14:30〜15:10。対話式の絵本の読み語り。子育て中の親子と絵本好きの方が対象。当日直接会場へ(定員35名)。",
+    url: "https://www.city.suginami.tokyo.jp/s113/event/28335.html", source: "杉並区公式"
+  },
+  {
+    id: "futako-rise-xmas-2026",
+    title: "二子玉川ライズ クリスマス2026",
+    start: "2026-11-07", end: "2026-12-25",
+    zone: "local", area: "世田谷区",
+    venue: "二子玉川ライズ(玉川2-21-1)/二子玉川駅直結",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "高さ約9mのツリー、イルミネーション、サンタに手紙を出せるサンタポスト。音と光の演出は16:00〜23:00に15分おき。イルミは2027/2/28まで。",
+    url: "https://report.iko-yo.net/articles/34419", source: "いこーよ"
+  },
+  {
+    id: "futako-rise-skate-2026",
+    title: "二子玉川ライズ スケートガーデン 2026",
+    start: "2026-12-05", end: "2027-02-28",
+    zone: "local", area: "世田谷区",
+    venue: "二子玉川ライズ 中央広場(玉川2-21-1)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "屋外アイススケートリンクが今年も期間限定でオープン。",
+    url: "https://www.oricon.co.jp/pressrelease/3027888/", source: "ORICON(プレスリリース)"
+  },
+  {
+    id: "takaido-jidokan-craft-2026",
+    title: "むさっこクラフト(高井戸児童館)",
+    start: "2026-11-28", end: "2026-11-28",
+    zone: "local", area: "杉並区",
+    venue: "高井戸児童館(高井戸西2-5-10)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "14:15〜16:15。武蔵野大学の学生が教えてくれる、児童館ならではのスペシャルな工作。対象は小学生と乳幼児親子。",
+    url: "https://www.city.suginami.tokyo.jp/documents/3520/31takaido2611.pdf", source: "杉並区 高井戸児童館だより"
+  },
+  {
+    id: "nozawa-hiking-komazawa-2026",
+    title: "野沢児童館 11月のハイキング~駒沢オリンピック公園で自然さんぽ~",
+    start: "2026-11-28", end: "2026-11-28",
+    zone: "local", area: "世田谷区",
+    venue: "駒沢オリンピック公園(10:00〜16:30)",
+    price: "無料",
+    categories: ["family"],
+    summary: "小学1〜6年生20人。事前活動(11/21(土)15:00〜16:30)にも参加できる人が対象。申込は11/10(火)16:00〜11/18(水)18:00。",
+    url: "https://www.city.setagaya.lg.jp/03064/36089.html", source: "世田谷区公式"
+  },
+  {
+    id: "setagaya-multilingual-ws-1129",
+    title: "【世田谷芸術百華】親子向け多言語ワークショップ",
+    start: "2026-11-29", end: "2026-11-29",
+    zone: "local", area: "世田谷区",
+    venue: "玉川区民会館(玉川せせらぎホール)4階(等々力3-4-1)/東急大井町線等々力駅から徒歩1分",
+    price: "参加費無料(要事前申込・先着順)",
+    categories: ["family"],
+    summary: "10:00〜11:30。英語だけでなくいろいろな言葉の音を聞いたりまねしたりする親子向けワークショップ。",
+    url: "https://www.city.setagaya.lg.jp/02408/34662.html", source: "世田谷区公式"
+  },
+  {
+    id: "kichijoji-parco-flea-1206",
+    title: "吉祥寺パルコ MOTTAINAIフリーマーケット(12月)",
+    start: "2026-12-06", end: "2026-12-06",
+    zone: "local", area: "武蔵野市(吉祥寺)",
+    venue: "吉祥寺パルコ 屋上(吉祥寺本町1-5-1)/吉祥寺駅から徒歩約2分",
+    price: "入場無料(出店は有料)",
+    categories: ["family"],
+    summary: "9:30〜14:00。約100店のフリマで、子ども服・雑貨・古本などが並ぶ。情報は2026年8月時点のため直前に要確認。",
+    url: "https://www.walkerplus.com/event/ar0313e608810/", source: "ウォーカープラス"
+  },
+  {
+    id: "nozawa-koala-concert-1211",
+    title: "野沢児童館 コアラママアンサンブル ファミリーコンサート",
+    start: "2026-12-11", end: "2026-12-11",
+    zone: "local", area: "世田谷区",
+    venue: "野沢児童館 プレイルーム",
+    price: "無料",
+    categories: ["family"],
+    summary: "10:30〜11:30(開場10:15)。乳幼児と保護者30組。受付は11/10(火)10:30からひろば内、電話は11:30から。",
+    url: "https://www.city.setagaya.lg.jp/03064/36688.html", source: "世田谷区公式"
+  },
+  {
+    id: "setagaya-boroichi-1215",
+    title: "世田谷のボロ市(12月)",
+    start: "2026-12-15", end: "2026-12-16",
+    zone: "local", area: "世田谷区",
+    venue: "世田谷1丁目 ボロ市通り周辺/東急世田谷駅・上町駅から徒歩3分",
+    price: "無料",
+    categories: ["family", "gourmet"],
+    summary: "代官屋敷を中心に露店が並ぶ伝統の市。1日に約20万人の人出。駐車場なし。次は2027/1/15・16。",
+    url: "https://www.city.setagaya.lg.jp/02072/10108.html", source: "世田谷区公式"
+  },
+  {
+    id: "setagaya-xmas-cookie-1220",
+    title: "親子クリスマスクッキーワークショップ",
+    start: "2026-12-20", end: "2026-12-20",
+    zone: "local", area: "世田谷区",
+    venue: "フラワーピクニックカフェ東京アトリエ(松原5-58-16)",
+    price: "記載なし(主催者に確認)",
+    categories: ["family"],
+    summary: "親子で作るクリスマスのアイシングクッキー。作ったクッキーはオーナメントとして飾れる。",
+    url: "https://iko-yo.net/events/537280", source: "いこーよ"
+  },
+
+  // ===== 東京都内(上記以外) =====
   {
     id: "winter-aipaku-2026",
     title: "冬のあいぱく Premium TOKYO",
-    start: "2026-11-10",
-    end: "2026-11-17",
-    area: "東京",
-    venue: "新宿住友ビル 三角広場(新宿区)",
+    start: "2026-11-10", end: "2026-11-17",
+    zone: "tokyo", area: "新宿区",
+    venue: "新宿住友ビル 三角広場",
     price: "小学生以上 平日600円/土日祝900円、未就学児無料",
     categories: ["gourmet", "family"],
     summary: "全国のご当地アイスや冬アイスが集まる全天候型イベント。投票企画もあり。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
   },
   {
     id: "fiesta-espana-2026",
     title: "フィエスタ・デ・エスパーニャ 2026",
-    start: "2026-11-14",
-    end: "2026-11-15",
-    area: "東京",
-    venue: "代々木公園 イベント広場(渋谷区)",
+    start: "2026-11-14", end: "2026-11-15",
+    zone: "tokyo", area: "渋谷区",
+    venue: "代々木公園 イベント広場",
     price: "公式サイトで確認",
     categories: ["gourmet", "family"],
     summary: "スペイン料理・音楽・フラメンコが楽しめる国内最大級のスペインフェス。初日20時、最終日19時まで。雨天決行(荒天中止)。",
-    url: "https://www.iwafu.com/tw/events/1036420",
-    source: "iwafu"
-  },
-  {
-    id: "shonan-mall-fashion-week-2026",
-    title: "2026 SDGs×秋冬ファッションウィーク(焼き芋フェス同時開催)",
-    start: "2026-11-14",
-    end: "2026-11-15",
-    area: "神奈川",
-    venue: "湘南モールフィル(藤沢市)",
-    price: "キッズ・親子部門の参加費は無料",
-    categories: ["family", "gourmet"],
-    summary: "親子ペアで参加できるファッションコンテストや子育てトークショー、古着市。焼き芋フェスも同時開催。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://www.iwafu.com/tw/events/1036420", source: "iwafu"
   },
   {
     id: "stitch-party-2026",
     title: "スティッチ・パーティー! by ホットトイズ",
-    start: "2026-10-20",
-    end: "2026-11-16",
-    area: "東京",
-    venue: "SHIBUYA TSUTAYA 1階(渋谷区)",
+    start: "2026-10-20", end: "2026-11-16",
+    zone: "tokyo", area: "渋谷区",
+    venue: "SHIBUYA TSUTAYA 1階",
     price: "入場無料",
     categories: ["family"],
     summary: "スティッチの立体造形やパネル、フォトスポットを展示。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
   },
   {
     id: "showa-kinen-kouyou-2026",
     title: "黄葉・紅葉まつり&秋の夜散歩2026",
-    start: "2026-10-29",
-    end: "2026-11-29",
-    area: "東京",
-    venue: "国営昭和記念公園(立川市・昭島市)",
+    start: "2026-10-29", end: "2026-11-29",
+    zone: "tokyo", area: "立川市・昭島市",
+    venue: "国営昭和記念公園",
     price: "大人450円、中学生以下無料",
     categories: ["family"],
     summary: "イチョウ並木のライトアップ(16:30〜20:30)とデジタルスタンプラリー。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "yomiuriland-jewellumination-2026",
+    title: "よみうりランド ジュエルミネーション2026 Growing Light",
+    start: "2026-10-29", end: "2027-04-04",
+    zone: "tokyo", area: "稲城市",
+    venue: "よみうりランド(矢野口4015-1)※休園日あり",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "17シーズン目。新色のグリーン系の宝石色。人気オブジェ「グランド・サンクチュアリ」を通り抜けられる。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "tachikawa-illumi-2026",
+    title: "たちかわイルミネーション 2026",
+    start: "2026-11-01", end: "2027-01-17",
+    zone: "tokyo", area: "立川市",
+    venue: "JR立川駅北口 サンサンロード",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "約550mのケヤキ並木に約60万球。光のゲートとフォトスポット。12月の5日間限定でウィンターマーケットも。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "roppongi-hills-xmas-2026",
+    title: "ROPPONGI HILLS CHRISTMAS 2026(けやき坂イルミネーション)",
+    start: "2026-11-05", end: "2026-12-25",
+    zone: "tokyo", area: "港区",
+    venue: "六本木ヒルズ けやき坂通りほか(六本木6-10-1)",
+    price: "記載なし(公式で確認)",
+    categories: ["family", "gourmet"],
+    summary: "約400mの並木道にLED約97万灯。馬のミニチュアが動くジオラマ。11/21からクリスマスマーケット。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "shinjuku-minamirumi-2026",
+    title: "新宿ミナミルミ 2026-2027",
+    start: "2026-11-11", end: "2027-02-14",
+    zone: "tokyo", area: "新宿区・渋谷区",
+    venue: "新宿駅南口エリアの6会場(点灯時間は会場により異なる)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "約27.5万球のLEDが回廊のようにつながる。デジタルスタンプラリー(11/11〜12/25)あり。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "hibiya-magic-time-2026",
+    title: "HIBIYA Magic Time Illumination 2026",
+    start: "2026-11-12", end: "2027-02-28",
+    zone: "tokyo", area: "千代田区",
+    venue: "東京ミッドタウン日比谷 日比谷ステップ広場ほか",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "高さ約8mのフルカラーツリーとBGM・光の演出。ステップ広場のツリーは12/25まで。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "yoyogi-forest-of-lights-2026",
+    title: "代々木フォレスト・オブ・ライツ ~光の森~",
+    start: "2026-11-13", end: "2027-01-11",
+    zone: "tokyo", area: "渋谷区",
+    venue: "代々木公園 サイクリングロードエリア",
+    price: "日時指定のチケット制(料金は公式で確認)",
+    categories: ["family"],
+    summary: "入場は17:30〜20:30の30分ごとの枠制。演出の詳細は公式サイトで発表待ち。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "ebisu-baccarat-2026",
+    title: "Baccarat ETERNAL LIGHTS(恵比寿ガーデンプレイス)",
+    start: "2026-11-14", end: "2027-01-11",
+    zone: "tokyo", area: "渋谷区",
+    venue: "恵比寿ガーデンプレイス センター広場ほか",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "高さ約5mの世界最大級のバカラシャンデリア。時計広場に約10mのツリーとクリスマスマルシェ。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
   },
   {
     id: "tokyo-snow-dome-city-2026",
     title: "TOKYO SNOW DOME CITY",
-    start: "2026-11-19",
-    end: "2027-02-28",
-    area: "東京",
-    venue: "東京ドームシティ(文京区)",
+    start: "2026-11-19", end: "2027-02-28",
+    zone: "tokyo", area: "文京区",
+    venue: "東京ドームシティ",
     price: "入場無料",
     categories: ["family"],
     summary: "100万球超のイルミネーション、高さ約15mのLEDツリー、巨大スノードーム、公式アプリのクイズラリー。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "lightbeats-2026",
+    title: "LIGHTBEATS(ライトビーツ ~光の鼓動~)",
+    start: "2026-11-19", end: "2027-01-31",
+    zone: "tokyo", area: "港区・品川区",
+    venue: "WATERS takeshiba/TAKANAWA GATEWAY CITY/OIMACHI TRACKS",
+    price: "無料",
+    categories: ["family"],
+    summary: "歩いたり腕を振ったりすると光と音が生まれる体験型イルミネーション。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "midtown-yaesu-xmas-2026",
+    title: "MIDTOWN YAESU CHRISTMAS 2026",
+    start: "2026-11-19", end: "2026-12-25",
+    zone: "tokyo", area: "中央区",
+    venue: "東京ミッドタウン八重洲 1Fガレリアほか",
+    price: "無料",
+    categories: ["family"],
+    summary: "高さ約7mのツリーと10分ごとの光と音の演出。YAESU WINTER LIGHTSは2027/2/14まで。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
   },
   {
     id: "tokyo-xmas-market-shintoyosu-2026",
     title: "東京クリスマスマーケット2026 in 新豊洲",
-    start: "2026-11-20",
-    end: "2026-12-25",
-    area: "東京",
-    venue: "新豊洲(江東区豊洲6-4)/ゆりかもめ新豊洲駅から徒歩2分",
+    start: "2026-11-20", end: "2026-12-25",
+    zone: "tokyo", area: "江東区",
+    venue: "新豊洲(豊洲6-4)/ゆりかもめ新豊洲駅から徒歩2分",
     price: "事前予約チケット制(混雑時は当日入場を制限する場合あり)",
     categories: ["gourmet", "family"],
-    summary: "初開催の湾岸会場。巨大プレッツェル、グリューワイン、サンタのチュロス、チーズフォンデュなどのグルメ。11:00〜21:30(初日16:00〜)。",
-    url: "https://bestcalendar.jp/press/159441",
-    source: "bestcalendar"
+    summary: "初開催の湾岸会場。巨大プレッツェル、グリューワイン、サンタのチュロス、チーズフォンデュなど。11:00〜21:30(初日16:00〜)。",
+    url: "https://bestcalendar.jp/press/159441", source: "bestcalendar"
   },
   {
     id: "tokyo-xmas-market-shibakoen-2026",
     title: "東京クリスマスマーケット2026 in 芝公園",
-    start: "2026-12-04",
-    end: "2026-12-25",
-    area: "東京",
-    venue: "東京都立芝公園4号地(港区芝公園3-2)/都営三田線御成門駅から徒歩1分",
+    start: "2026-12-04", end: "2026-12-25",
+    zone: "tokyo", area: "港区",
+    venue: "東京都立芝公園4号地(芝公園3-2)/都営三田線御成門駅から徒歩1分",
     price: "事前予約チケット制",
     categories: ["gourmet", "family"],
     summary: "東京タワーを望む会場。高さ約14mのクリスマスピラミッド、ワークショップ。11:00〜22:00(初日16:00〜)。",
-    url: "https://bestcalendar.jp/press/155932",
-    source: "bestcalendar"
+    url: "https://bestcalendar.jp/press/155932", source: "bestcalendar"
   },
   {
     id: "tokyo-christmas-advent-ueno-2026",
     title: "東京クリスマスアドベント(上野)",
-    start: "2026-11-06",
-    end: null,
-    area: "東京",
-    venue: "上野恩賜公園 袴腰広場(11/18から不忍池エリアにも拡大)",
-    price: "公式サイトで確認",
+    start: "2026-11-06", end: "2026-12-25",
+    zone: "tokyo", area: "台東区",
+    venue: "上野恩賜公園 袴腰広場(不忍池エリアは11/18から)",
+    price: "記載なし(公式で確認)",
     categories: ["family"],
-    summary: "テーマは「Five Senses Christmas」。東京初上陸の屋外サーカス「AURA」や、100体以上のサンタが集まる展示。終了日は未確認。",
-    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_kanto/",
-    source: "ENJOY TOKYO"
+    summary: "光の馬車や気球の大型イルミ、東京初上陸の屋外サーカス「AURA」、100体以上のサンタが集まる「Festa de Santa」。",
+    url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+
+  // ===== 関東近郊 =====
+  {
+    id: "minatomirai-winter-2026",
+    title: "横浜・みなとみらい Winter Holiday 2026",
+    start: "2026-11-11", end: "2027-01-11",
+    zone: "kanto", area: "神奈川県横浜市",
+    venue: "横浜ランドマークタワー、MARK IS みなとみらいほか",
+    price: "記載なし(公式で確認)",
+    categories: ["family", "gourmet"],
+    summary: "ドラクエ×FFの冬のファンタジー。巨大な「スライムとチョコボ」オブジェ、スタンプラリー、コラボカフェ「スラチョコキッチン」。",
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "moomin-nyoronyoro-2026",
+    title: "超ニョロニョロフェスタ2026",
+    start: "2026-11-11", end: "2026-11-15",
+    zone: "kanto", area: "埼玉県飯能市",
+    venue: "ムーミンバレーパーク",
+    price: "ナイトパス 11/11限定1,100円(通常2,500円)ほか",
+    categories: ["family"],
+    summary: "ニョロニョロ体験、湖上花火(11・14・15日)、バルーンで帽子を作るワークショップ。",
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "shonan-mall-fashion-week-2026",
+    title: "2026 SDGs×秋冬ファッションウィーク(焼き芋フェス同時開催)",
+    start: "2026-11-14", end: "2026-11-15",
+    zone: "kanto", area: "神奈川県藤沢市",
+    venue: "湘南モールフィル",
+    price: "キッズ・親子部門の参加費は無料",
+    categories: ["family", "gourmet"],
+    summary: "親子ペアで参加できるファッションコンテストや子育てトークショー、古着市。焼き芋フェスも同時開催。",
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "yokohama-akarenga-xmas-2026",
+    title: "Christmas Market in 横浜赤レンガ倉庫",
+    start: "2026-11-20", end: "2026-12-25",
+    zone: "kanto", area: "神奈川県横浜市",
+    venue: "横浜赤レンガ倉庫 イベント広場・赤レンガパーク",
+    price: "入場料500円〜(新港中央広場とChristmas Villageは無料エリア)",
+    categories: ["gourmet", "family"],
+    summary: "約60店舗のグルメ・雑貨。高さ約11mの生木ツリー。無料エリアではポケモンコラボのイルミネーションも。",
+    url: "https://bestcalendar.jp/press/160198", source: "bestcalendar"
   },
   {
     id: "kashiwanoha-machimarufes-2026",
     title: "柏の葉街まるごとフェスティバル",
-    start: "2026-11-22",
-    end: "2026-11-22",
-    area: "千葉",
-    venue: "柏の葉キャンパス駅周辺、柏の葉公園ほか(柏市)",
+    start: "2026-11-22", end: "2026-11-22",
+    zone: "kanto", area: "千葉県柏市",
+    venue: "柏の葉キャンパス駅周辺、柏の葉公園ほか",
     price: "入場無料",
     categories: ["family", "gourmet"],
     summary: "東京ディズニーリゾートのスペシャルパレード、ダッフィーバス展示、子ども向け体験、こどもマーケット、野外シネマ、キッチンカー。",
-    url: "https://report.iko-yo.net/articles/34619",
-    source: "いこーよ"
+    url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
   }
 ];

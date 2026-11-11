@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>東京周辺 おでかけイベント(家族・グルメ)</title>
+<title>おでかけイベント(杉並・世田谷・吉祥寺/東京/関東近郊)</title>
 <style>
   :root {
     --bg: #faf8f5; --card: #ffffff; --text: #26231f; --muted: #6f6a62;
@@ -24,13 +24,13 @@
   .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
   h1 { font-size: 1.35rem; margin: 8px 0 2px; }
   .sub { color: var(--muted); font-size: .85rem; margin: 0 0 16px; }
-  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .group-label { font-size: .75rem; color: var(--muted); margin: 10px 2px 4px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { border: 1px solid var(--line); background: var(--card); color: var(--text);
     border-radius: 999px; padding: 6px 14px; font-size: .88rem; cursor: pointer; font-family: inherit; }
+  .chip .n { opacity: .65; margin-left: 4px; font-size: .78rem; }
   .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
-  select { border: 1px solid var(--line); background: var(--card); color: var(--text);
-    border-radius: 999px; padding: 6px 12px; font-size: .88rem; font-family: inherit; }
-  .count { color: var(--muted); font-size: .82rem; margin: 10px 2px 12px; }
+  .count { color: var(--muted); font-size: .82rem; margin: 14px 2px 12px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
     padding: 14px 16px; margin-bottom: 12px; }
   .card h2 { font-size: 1.02rem; margin: 6px 0 4px; line-height: 1.4; }
@@ -50,28 +50,20 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>東京周辺 おでかけイベント</h1>
-  <p class="sub">家族向け・グルメ ／ 最終更新: <span id="updated"></span></p>
+  <h1>おでかけイベント</h1>
+  <p class="sub">家族で行けるイベントを厳選 ／ 毎日更新 ／ 最終更新: <span id="updated"></span></p>
 
-  <div class="controls" id="cat-controls">
-    <button class="chip" data-cat="all" aria-pressed="true">すべて</button>
-    <button class="chip" data-cat="family" aria-pressed="false">家族向け</button>
-    <button class="chip" data-cat="gourmet" aria-pressed="false">グルメ</button>
-  </div>
-  <div class="controls" id="when-controls">
-    <button class="chip" data-when="all" aria-pressed="true">全期間</button>
-    <button class="chip" data-when="weekend" aria-pressed="false">今週末</button>
-    <button class="chip" data-when="now" aria-pressed="false">開催中</button>
-    <select id="area" aria-label="エリア">
-      <option value="all">全エリア</option>
-    </select>
-  </div>
+  <div class="group-label">エリア</div>
+  <div class="controls" id="zone-controls"></div>
+  <div class="group-label">時期</div>
+  <div class="controls" id="time-controls"></div>
 
   <div class="count" id="count"></div>
   <div id="list"></div>
 
   <footer>
-    開催日・料金・混雑状況は変更される場合があります。お出かけ前に必ずリンク先や公式サイトで最新情報をご確認ください。
+    「直近1週間」は今日から7日以内に開催(または開催中)のもの、「1週間以上先」はそれより後に始まるものです。
+    開催日・料金・予約の要否は変更される場合があります。お出かけ前に必ずリンク先や公式サイトで最新情報をご確認ください。
     リンクは情報の出典ページです。
   </footer>
 </div>
@@ -79,22 +71,24 @@
 <script src="events.js"></script>
 <script>
 (function () {
-  var state = { cat: "all", when: "all", area: "all" };
   var DAY = 86400000;
+  var ZONES = [
+    { key: "all", label: "すべて" },
+    { key: "local", label: "杉並・世田谷・吉祥寺周辺" },
+    { key: "tokyo", label: "東京都内" },
+    { key: "kanto", label: "関東近郊" }
+  ];
+  var TIMES = [
+    { key: "all", label: "すべて" },
+    { key: "week", label: "直近1週間" },
+    { key: "later", label: "1週間以上先" }
+  ];
+  var state = { zone: "all", time: "all" };
 
   function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function today() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
   function fmt(d) { return (d.getMonth() + 1) + "/" + d.getDate() + "(" + "日月火水木金土"[d.getDay()] + ")"; }
   function fmtFull(d, withYear) { return (withYear ? d.getFullYear() + "/" : "") + fmt(d); }
-
-  function weekend(t) {
-    var dow = t.getDay(); // 0=Sun
-    var sat, sun;
-    if (dow === 0) { sun = t; sat = new Date(t.getTime() - DAY); }
-    else if (dow === 6) { sat = t; sun = new Date(t.getTime() + DAY); }
-    else { sat = new Date(t.getTime() + (6 - dow) * DAY); sun = new Date(sat.getTime() + DAY); }
-    return [sat, sun];
-  }
 
   function period(e) {
     var s = parse(e.start), end = e.end ? parse(e.end) : null;
@@ -115,17 +109,18 @@
     return d <= 7 ? "あと" + d + "日で開始" : "";
   }
 
-  function visible(e, t) {
-    if (e.end && parse(e.end) < t) return false; // 終了済みは非表示
-    if (state.cat !== "all" && e.categories.indexOf(state.cat) < 0) return false;
-    if (state.area !== "all" && e.area !== state.area) return false;
-    var s = parse(e.start), end = e.end ? parse(e.end) : null;
-    if (state.when === "now") return s <= t;
-    if (state.when === "weekend") {
-      var w = weekend(t);
-      return s <= w[1] && (!end || end >= w[0]);
-    }
-    return true;
+  function alive(e, t) { return !e.end || parse(e.end) >= t; }
+
+  function inTime(e, t, key) {
+    if (key === "all") return true;
+    var limit = new Date(t.getTime() + 7 * DAY);
+    var s = parse(e.start);
+    if (key === "week") return s <= limit;     // 今日〜7日後に開催中 or 開始
+    return s > limit;                          // 7日より後に開始
+  }
+
+  function matches(e, t, zone, time) {
+    return alive(e, t) && (zone === "all" || e.zone === zone) && inTime(e, t, time);
   }
 
   function el(tag, cls, text) {
@@ -135,9 +130,29 @@
     return n;
   }
 
+  function renderChips(containerId, defs, key) {
+    var t = today();
+    var box = document.getElementById(containerId);
+    box.textContent = "";
+    defs.forEach(function (d) {
+      var n = window.EVENTS.filter(function (e) {
+        return key === "zone" ? matches(e, t, d.key, state.time) : matches(e, t, state.zone, d.key);
+      }).length;
+      var b = el("button", "chip", d.label);
+      b.type = "button";
+      b.setAttribute("aria-pressed", state[key] === d.key ? "true" : "false");
+      b.appendChild(el("span", "n", String(n)));
+      b.addEventListener("click", function () { state[key] = d.key; render(); });
+      box.appendChild(b);
+    });
+  }
+
   function render() {
     var t = today();
-    var items = window.EVENTS.filter(function (e) { return visible(e, t); });
+    renderChips("zone-controls", ZONES, "zone");
+    renderChips("time-controls", TIMES, "time");
+
+    var items = window.EVENTS.filter(function (e) { return matches(e, t, state.zone, state.time); });
     items.sort(function (a, b) {
       var ka = Math.max(parse(a.start), t), kb = Math.max(parse(b.start), t);
       return ka - kb || parse(a.start) - parse(b.start);
@@ -171,26 +186,7 @@
     });
   }
 
-  function bindChips(containerId, key, attr) {
-    document.getElementById(containerId).addEventListener("click", function (ev) {
-      var b = ev.target.closest("button.chip");
-      if (!b) return;
-      state[key] = b.getAttribute(attr);
-      this.querySelectorAll("button.chip").forEach(function (x) {
-        x.setAttribute("aria-pressed", x === b ? "true" : "false");
-      });
-      render();
-    });
-  }
-
   document.getElementById("updated").textContent = window.LAST_UPDATED.replace(/-/g, "/");
-  var areas = [];
-  window.EVENTS.forEach(function (e) { if (areas.indexOf(e.area) < 0) areas.push(e.area); });
-  var sel = document.getElementById("area");
-  areas.forEach(function (a) { var o = el("option", null, a); o.value = a; sel.appendChild(o); });
-  sel.addEventListener("change", function () { state.area = sel.value; render(); });
-  bindChips("cat-controls", "cat", "data-cat");
-  bindChips("when-controls", "when", "data-when");
   render();
 })();
 </script>
