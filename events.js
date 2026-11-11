@@ -264,6 +264,17 @@ window.EVENTS = [
 
   // ===== 東京都内(上記以外) =====
   {
+    id: "nishitokyo-shiminmatsuri-23-2026",
+    title: "第23回西東京市民まつり",
+    start: "2026-11-14", end: "2026-11-15",
+    zone: "local", area: "西東京市",
+    venue: "西東京いこいの森公園(緑町3-2)",
+    price: "記載なし(公式で確認)",
+    categories: ["family", "gourmet"],
+    summary: "11/14は10:00〜16:00、11/15は9:00〜15:30。西東京市民まつり実行委員会と市の主催。来場者向けの内容は公式で確認(出店者向け資料で日程を確認)。",
+    url: "https://www.city.nishitokyo.lg.jp/enjoy/bunkasai/matsuri/shiminmatsuri.files/matsuri-shuten2026.pdf", source: "西東京市公式(出店要領)"
+  },
+  {
     id: "winter-aipaku-2026",
     free: false,
     title: "冬のあいぱく Premium TOKYO",
@@ -430,7 +441,7 @@ window.EVENTS = [
     start: "2026-11-20", end: "2026-12-25",
     zone: "tokyo", area: "江東区",
     venue: "新豊洲(豊洲6-4)/ゆりかもめ新豊洲駅から徒歩2分",
-    price: "事前予約チケット制(混雑時は当日入場を制限する場合あり)",
+    price: "入場料 大人(中学生以上)平日1,000円・土日祝1,500円、小学生500円、未就学児無料(12/24・25は大人2,000円・子ども1,000円)。ワークショップは別料金",
     categories: ["gourmet", "family"],
     summary: "初開催の湾岸会場。巨大プレッツェル、グリューワイン、サンタのチュロス、チーズフォンデュなど。11:00〜21:30(初日16:00〜)。",
     url: "https://bestcalendar.jp/press/159441", source: "bestcalendar"
@@ -442,21 +453,69 @@ window.EVENTS = [
     start: "2026-12-04", end: "2026-12-25",
     zone: "tokyo", area: "港区",
     venue: "東京都立芝公園4号地(芝公園3-2)/都営三田線御成門駅から徒歩1分",
-    price: "事前予約チケット制",
+    price: "入場料 大人平日1,000円・土日祝1,500円(新豊洲と同じ料金体系)、未就学児無料。ワークショップは別料金・一部予約制",
     categories: ["gourmet", "family"],
     summary: "東京タワーを望む会場。高さ約14mのクリスマスピラミッド、ワークショップ。11:00〜22:00(初日16:00〜)。",
     url: "https://bestcalendar.jp/press/155932", source: "bestcalendar"
   },
   {
     id: "tokyo-christmas-advent-ueno-2026",
+    free: true,
     title: "東京クリスマスアドベント(上野)",
     start: "2026-11-06", end: "2026-12-25",
     zone: "tokyo", area: "台東区",
     venue: "上野恩賜公園 袴腰広場(不忍池エリアは11/18から)",
-    price: "記載なし(公式で確認)",
+    price: "入場無料(一部のライブは有料・チケット制)",
     categories: ["family"],
     summary: "光の馬車や気球の大型イルミ、東京初上陸の屋外サーカス「AURA」、100体以上のサンタが集まる「Festa de Santa」。",
     url: "https://report.iko-yo.net/articles/34740", source: "いこーよ"
+  },
+  {
+    id: "tokyotower-xmas-market-2026",
+    free: true,
+    title: "TOKYO TOWER Christmas Market 2026",
+    start: "2026-11-13", end: "2026-12-25",
+    zone: "tokyo", area: "港区",
+    venue: "東京タワー 正面玄関前広場",
+    price: "入場無料",
+    categories: ["gourmet", "family"],
+    summary: "12:00〜22:00(L.O.21:30)。東京タワー前のクリスマスマーケット。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
+  },
+  {
+    id: "skytree-ehon-xmas-market-2026",
+    title: "絵本の中のクリスマスマーケット in 東京スカイツリータウン 2026",
+    start: "2026-11-05", end: "2026-12-25",
+    zone: "tokyo", area: "墨田区(押上)",
+    venue: "東京スカイツリータウン",
+    price: "記載なし(公式で確認)",
+    categories: ["gourmet", "family"],
+    summary: "11:00〜22:00。スカイツリーのふもとで開かれるクリスマスマーケット。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
+  },
+  {
+    id: "adachi-hikari-festival-2026",
+    free: true,
+    title: "光の祭典2026",
+    start: "2026-11-28", end: "2026-12-25",
+    zone: "tokyo", area: "足立区(六町)",
+    venue: "元渕江公園ほか",
+    price: "入場無料(物販など一部有料)",
+    categories: ["family"],
+    summary: "足立区・六町のイルミネーション。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
+  },
+  {
+    id: "tamacenter-xmas-night-market-2026",
+    free: true,
+    title: "クリスマス ナイト マーケット 多摩センター 2026",
+    start: "2026-12-19", end: "2026-12-24",
+    zone: "tokyo", area: "多摩市",
+    venue: "多摩センター駅前 パルテノン大通り",
+    price: "入場無料(荒天中止)",
+    categories: ["gourmet", "family"],
+    summary: "16:00〜20:00(12/19・20は昼の部あり)。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
   },
 
   // ===== 関東近郊 =====
@@ -518,5 +577,29 @@ window.EVENTS = [
     categories: ["family", "gourmet"],
     summary: "東京ディズニーリゾートのスペシャルパレード、ダッフィーバス展示、子ども向け体験、こどもマーケット、野外シネマ、キッチンカー。",
     url: "https://report.iko-yo.net/articles/34619", source: "いこーよ"
+  },
+  {
+    id: "minatomirai-xmas-market-2026",
+    free: true,
+    title: "みなとみらいクリスマスマーケット2026",
+    start: "2026-11-13", end: "2026-12-25",
+    zone: "kanto", area: "神奈川県横浜市",
+    venue: "グランモール公園",
+    price: "入場無料・予約不要(飲食代は別。現金・PayPay)",
+    categories: ["gourmet", "family"],
+    summary: "11:00〜21:30(初日11/13は16:00から)。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
+  },
+  {
+    id: "cocoon-city-xmas-market-2026",
+    free: true,
+    title: "COCOON CITY Christmas Market 2026",
+    start: "2026-11-07", end: "2026-12-25",
+    zone: "kanto", area: "埼玉県さいたま市",
+    venue: "コクーンシティ(さいたま新都心)",
+    price: "入場無料(飲食代は別)",
+    categories: ["gourmet", "family"],
+    summary: "12:00〜22:00(11/7のみ16:30〜18:45は一時休場)。",
+    url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
   }
 ];
