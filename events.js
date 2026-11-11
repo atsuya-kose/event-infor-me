@@ -1,13 +1,27 @@
 // イベントデータ。ここだけ更新すればサイトに反映されます。
 // zone: "local"(杉並区・世田谷区・吉祥寺/武蔵野・三鷹・西東京周辺) / "tokyo"(それ以外の東京都内) / "kanto"(関東近郊)
 // end が null のものは終了日が未確認です。
-// categories: "family"(家族向け) / "gourmet"(グルメ要素あり)
+// categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
+// free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
 window.LAST_UPDATED = "2026-11-11";
 
 window.EVENTS = [
+  {
+    id: "nihonshu-hitomeguri-shinbashi-2026",
+    free: false,
+    title: "にほんしゅ ひと巡り ―新橋 2026―",
+    start: "2026-12-12", end: "2026-12-13",
+    zone: "tokyo", area: "港区(新橋)",
+    venue: "MEETING SPACE AP新橋 3階",
+    price: "参加費5,000円(完全入れ替え制・定員各部200名)",
+    categories: ["drink"],
+    summary: "全国18の酒蔵が集まる日本酒の体験イベント。試飲、蔵人との交流、おつまみ、トークショー、その場での購入も。12/12 12-14時・16-18時、12/13 11-13時・14:30-16:30。参加申込はPeatix。",
+    url: "https://www.bcnretail.com/market/detail/20261001_665107.html", source: "BCN+R"
+  },
   // ===== 杉並区・世田谷区・吉祥寺周辺 =====
   {
     id: "setabun-jazz-0sai-2026",
+    free: false,
     title: "0才からのジャズコンサート 世田谷 2026",
     start: "2026-11-11", end: "2026-11-11",
     zone: "local", area: "世田谷区",
@@ -19,6 +33,7 @@ window.EVENTS = [
   },
   {
     id: "suginami-ehon-live-amanuma-2026",
+    free: true,
     title: "「絵本ライブ天沼」対話式でおはなし会",
     start: "2026-11-13", end: "2026-11-13",
     zone: "local", area: "杉並区",
@@ -30,6 +45,7 @@ window.EVENTS = [
   },
   {
     id: "ogikubo-center-matsuri-2026",
+    free: true,
     title: "おぎくぼセンターまつり",
     start: "2026-11-15", end: "2026-11-15",
     zone: "local", area: "杉並区",
@@ -107,6 +123,7 @@ window.EVENTS = [
   },
   {
     id: "nozawa-hiking-komazawa-2026",
+    free: true,
     title: "野沢児童館 11月のハイキング~駒沢オリンピック公園で自然さんぽ~",
     start: "2026-11-28", end: "2026-11-28",
     zone: "local", area: "世田谷区",
@@ -118,6 +135,7 @@ window.EVENTS = [
   },
   {
     id: "setagaya-multilingual-ws-1129",
+    free: true,
     title: "【世田谷芸術百華】親子向け多言語ワークショップ",
     start: "2026-11-29", end: "2026-11-29",
     zone: "local", area: "世田谷区",
@@ -129,6 +147,7 @@ window.EVENTS = [
   },
   {
     id: "kichijoji-parco-flea-1206",
+    free: true,
     title: "吉祥寺パルコ MOTTAINAIフリーマーケット(12月)",
     start: "2026-12-06", end: "2026-12-06",
     zone: "local", area: "武蔵野市(吉祥寺)",
@@ -140,6 +159,7 @@ window.EVENTS = [
   },
   {
     id: "nozawa-koala-concert-1211",
+    free: true,
     title: "野沢児童館 コアラママアンサンブル ファミリーコンサート",
     start: "2026-12-11", end: "2026-12-11",
     zone: "local", area: "世田谷区",
@@ -151,6 +171,7 @@ window.EVENTS = [
   },
   {
     id: "setagaya-boroichi-1215",
+    free: true,
     title: "世田谷のボロ市(12月)",
     start: "2026-12-15", end: "2026-12-16",
     zone: "local", area: "世田谷区",
@@ -175,6 +196,7 @@ window.EVENTS = [
   // ===== 東京都内(上記以外) =====
   {
     id: "winter-aipaku-2026",
+    free: false,
     title: "冬のあいぱく Premium TOKYO",
     start: "2026-11-10", end: "2026-11-17",
     zone: "tokyo", area: "新宿区",
@@ -197,6 +219,7 @@ window.EVENTS = [
   },
   {
     id: "stitch-party-2026",
+    free: true,
     title: "スティッチ・パーティー! by ホットトイズ",
     start: "2026-10-20", end: "2026-11-16",
     zone: "tokyo", area: "渋谷区",
@@ -208,6 +231,7 @@ window.EVENTS = [
   },
   {
     id: "showa-kinen-kouyou-2026",
+    free: false,
     title: "黄葉・紅葉まつり&秋の夜散歩2026",
     start: "2026-10-29", end: "2026-11-29",
     zone: "tokyo", area: "立川市・昭島市",
@@ -296,6 +320,7 @@ window.EVENTS = [
   },
   {
     id: "tokyo-snow-dome-city-2026",
+    free: true,
     title: "TOKYO SNOW DOME CITY",
     start: "2026-11-19", end: "2027-02-28",
     zone: "tokyo", area: "文京区",
@@ -307,6 +332,7 @@ window.EVENTS = [
   },
   {
     id: "lightbeats-2026",
+    free: true,
     title: "LIGHTBEATS(ライトビーツ ~光の鼓動~)",
     start: "2026-11-19", end: "2027-01-31",
     zone: "tokyo", area: "港区・品川区",
@@ -318,6 +344,7 @@ window.EVENTS = [
   },
   {
     id: "midtown-yaesu-xmas-2026",
+    free: true,
     title: "MIDTOWN YAESU CHRISTMAS 2026",
     start: "2026-11-19", end: "2026-12-25",
     zone: "tokyo", area: "中央区",
@@ -329,6 +356,7 @@ window.EVENTS = [
   },
   {
     id: "tokyo-xmas-market-shintoyosu-2026",
+    free: false,
     title: "東京クリスマスマーケット2026 in 新豊洲",
     start: "2026-11-20", end: "2026-12-25",
     zone: "tokyo", area: "江東区",
@@ -340,6 +368,7 @@ window.EVENTS = [
   },
   {
     id: "tokyo-xmas-market-shibakoen-2026",
+    free: false,
     title: "東京クリスマスマーケット2026 in 芝公園",
     start: "2026-12-04", end: "2026-12-25",
     zone: "tokyo", area: "港区",
@@ -375,6 +404,7 @@ window.EVENTS = [
   },
   {
     id: "moomin-nyoronyoro-2026",
+    free: false,
     title: "超ニョロニョロフェスタ2026",
     start: "2026-11-11", end: "2026-11-15",
     zone: "kanto", area: "埼玉県飯能市",
@@ -386,6 +416,7 @@ window.EVENTS = [
   },
   {
     id: "shonan-mall-fashion-week-2026",
+    free: false,
     title: "2026 SDGs×秋冬ファッションウィーク(焼き芋フェス同時開催)",
     start: "2026-11-14", end: "2026-11-15",
     zone: "kanto", area: "神奈川県藤沢市",
@@ -397,6 +428,7 @@ window.EVENTS = [
   },
   {
     id: "yokohama-akarenga-xmas-2026",
+    free: false,
     title: "Christmas Market in 横浜赤レンガ倉庫",
     start: "2026-11-20", end: "2026-12-25",
     zone: "kanto", area: "神奈川県横浜市",
@@ -408,6 +440,7 @@ window.EVENTS = [
   },
   {
     id: "kashiwanoha-machimarufes-2026",
+    free: true,
     title: "柏の葉街まるごとフェスティバル",
     start: "2026-11-22", end: "2026-11-22",
     zone: "kanto", area: "千葉県柏市",

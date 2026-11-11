@@ -8,13 +8,13 @@
   :root {
     --bg: #faf8f5; --card: #ffffff; --text: #26231f; --muted: #6f6a62;
     --line: #e7e1d8; --accent: #d9622b; --accent-soft: #fbe9df;
-    --family: #2f7d5b; --family-soft: #e1f2ea; --gourmet: #b4492a; --gourmet-soft: #fbe5dc;
+    --family: #2f7d5b; --family-soft: #e1f2ea; --gourmet: #b4492a; --gourmet-soft: #fbe5dc; --drink: #7a3fa0; --drink-soft: #efe3f7;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #1a1815; --card: #24211d; --text: #efeae2; --muted: #a39d92;
       --line: #38332d; --accent: #f0845a; --accent-soft: #3a2a21;
-      --family: #6cc79d; --family-soft: #1f3329; --gourmet: #f19a7c; --gourmet-soft: #3b2620;
+      --family: #6cc79d; --family-soft: #1f3329; --gourmet: #f19a7c; --gourmet-soft: #3b2620; --drink: #cfa2ee; --drink-soft: #33263f;
     }
   }
   * { box-sizing: border-box; }
@@ -38,7 +38,10 @@
   .tag { font-size: .72rem; padding: 2px 9px; border-radius: 999px; font-weight: 600; }
   .tag.family { background: var(--family-soft); color: var(--family); }
   .tag.gourmet { background: var(--gourmet-soft); color: var(--gourmet); }
+  .tag.drink { background: var(--drink-soft); color: var(--drink); }
   .tag.status { background: var(--accent-soft); color: var(--accent); }
+  .tag.free { background: #fff3c4; color: #7a5a00; }
+  @media (prefers-color-scheme: dark) { .tag.free { background: #4a3d12; color: #f3d778; } }
   .tag.area { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 400; }
   .meta { font-size: .85rem; color: var(--muted); margin: 2px 0; }
   .summary { font-size: .9rem; margin: 8px 0 6px; }
@@ -51,12 +54,14 @@
 <body>
 <div class="wrap">
   <h1>おでかけイベント</h1>
-  <p class="sub">家族で行けるイベントを厳選 ／ 毎日更新 ／ 最終更新: <span id="updated"></span></p>
+  <p class="sub">家族・グルメ・お酒のイベントを厳選 ／ 毎日更新 ／ 最終更新: <span id="updated"></span></p>
 
   <div class="group-label">エリア</div>
   <div class="controls" id="zone-controls"></div>
   <div class="group-label">時期</div>
   <div class="controls" id="time-controls"></div>
+  <div class="group-label">料金</div>
+  <div class="controls" id="free-controls"></div>
 
   <div class="count" id="count"></div>
   <div id="list"></div>
@@ -83,7 +88,11 @@
     { key: "week", label: "直近1週間" },
     { key: "later", label: "1週間以上先" }
   ];
-  var state = { zone: "all", time: "all" };
+  var FREES = [
+    { key: "all", label: "すべて" },
+    { key: "free", label: "無料のみ" }
+  ];
+  var state = { zone: "all", time: "all", free: "all" };
 
   function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function today() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
@@ -119,8 +128,14 @@
     return s > limit;                          // 7日より後に開始
   }
 
-  function matches(e, t, zone, time) {
-    return alive(e, t) && (zone === "all" || e.zone === zone) && inTime(e, t, time);
+  function matches(e, t, f) {
+    return alive(e, t) && (f.zone === "all" || e.zone === f.zone) && inTime(e, t, f.time) &&
+      (f.free === "all" || e.free === true);
+  }
+  function withState(key, value) {
+    var f = { zone: state.zone, time: state.time, free: state.free };
+    f[key] = value;
+    return f;
   }
 
   function el(tag, cls, text) {
@@ -135,9 +150,8 @@
     var box = document.getElementById(containerId);
     box.textContent = "";
     defs.forEach(function (d) {
-      var n = window.EVENTS.filter(function (e) {
-        return key === "zone" ? matches(e, t, d.key, state.time) : matches(e, t, state.zone, d.key);
-      }).length;
+      var f = withState(key, d.key);
+      var n = window.EVENTS.filter(function (e) { return matches(e, t, f); }).length;
       var b = el("button", "chip", d.label);
       b.type = "button";
       b.setAttribute("aria-pressed", state[key] === d.key ? "true" : "false");
@@ -151,8 +165,9 @@
     var t = today();
     renderChips("zone-controls", ZONES, "zone");
     renderChips("time-controls", TIMES, "time");
+    renderChips("free-controls", FREES, "free");
 
-    var items = window.EVENTS.filter(function (e) { return matches(e, t, state.zone, state.time); });
+    var items = window.EVENTS.filter(function (e) { return matches(e, t, state); });
     items.sort(function (a, b) {
       var ka = Math.max(parse(a.start), t), kb = Math.max(parse(b.start), t);
       return ka - kb || parse(a.start) - parse(b.start);
@@ -167,8 +182,9 @@
       var tags = el("div", "row");
       var st = statusOf(e, t);
       if (st) tags.appendChild(el("span", "tag status", st));
+      if (e.free === true) tags.appendChild(el("span", "tag free", "無料"));
       e.categories.forEach(function (c) {
-        tags.appendChild(el("span", "tag " + c, c === "family" ? "家族向け" : "グルメ"));
+        tags.appendChild(el("span", "tag " + c, ({ family: "家族向け", gourmet: "グルメ", drink: "お酒" })[c] || c));
       });
       tags.appendChild(el("span", "tag area", e.area));
       card.appendChild(tags);
