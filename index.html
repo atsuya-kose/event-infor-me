@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>東京周辺 おでかけイベント(家族・グルメ)</title>
+<style>
+  :root {
+    --bg: #faf8f5; --card: #ffffff; --text: #26231f; --muted: #6f6a62;
+    --line: #e7e1d8; --accent: #d9622b; --accent-soft: #fbe9df;
+    --family: #2f7d5b; --family-soft: #e1f2ea; --gourmet: #b4492a; --gourmet-soft: #fbe5dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1815; --card: #24211d; --text: #efeae2; --muted: #a39d92;
+      --line: #38332d; --accent: #f0845a; --accent-soft: #3a2a21;
+      --family: #6cc79d; --family-soft: #1f3329; --gourmet: #f19a7c; --gourmet-soft: #3b2620;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+  h1 { font-size: 1.35rem; margin: 8px 0 2px; }
+  .sub { color: var(--muted); font-size: .85rem; margin: 0 0 16px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .chip { border: 1px solid var(--line); background: var(--card); color: var(--text);
+    border-radius: 999px; padding: 6px 14px; font-size: .88rem; cursor: pointer; font-family: inherit; }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  select { border: 1px solid var(--line); background: var(--card); color: var(--text);
+    border-radius: 999px; padding: 6px 12px; font-size: .88rem; font-family: inherit; }
+  .count { color: var(--muted); font-size: .82rem; margin: 10px 2px 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 14px 16px; margin-bottom: 12px; }
+  .card h2 { font-size: 1.02rem; margin: 6px 0 4px; line-height: 1.4; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { font-size: .72rem; padding: 2px 9px; border-radius: 999px; font-weight: 600; }
+  .tag.family { background: var(--family-soft); color: var(--family); }
+  .tag.gourmet { background: var(--gourmet-soft); color: var(--gourmet); }
+  .tag.status { background: var(--accent-soft); color: var(--accent); }
+  .tag.area { background: transparent; border: 1px solid var(--line); color: var(--muted); font-weight: 400; }
+  .meta { font-size: .85rem; color: var(--muted); margin: 2px 0; }
+  .summary { font-size: .9rem; margin: 8px 0 6px; }
+  .src { font-size: .8rem; }
+  a { color: var(--accent); }
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+  footer { color: var(--muted); font-size: .78rem; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>東京周辺 おでかけイベント</h1>
+  <p class="sub">家族向け・グルメ ／ 最終更新: <span id="updated"></span></p>
+
+  <div class="controls" id="cat-controls">
+    <button class="chip" data-cat="all" aria-pressed="true">すべて</button>
+    <button class="chip" data-cat="family" aria-pressed="false">家族向け</button>
+    <button class="chip" data-cat="gourmet" aria-pressed="false">グルメ</button>
+  </div>
+  <div class="controls" id="when-controls">
+    <button class="chip" data-when="all" aria-pressed="true">全期間</button>
+    <button class="chip" data-when="weekend" aria-pressed="false">今週末</button>
+    <button class="chip" data-when="now" aria-pressed="false">開催中</button>
+    <select id="area" aria-label="エリア">
+      <option value="all">全エリア</option>
+    </select>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+
+  <footer>
+    開催日・料金・混雑状況は変更される場合があります。お出かけ前に必ずリンク先や公式サイトで最新情報をご確認ください。
+    リンクは情報の出典ページです。
+  </footer>
+</div>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  var state = { cat: "all", when: "all", area: "all" };
+  var DAY = 86400000;
+
+  function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function today() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function fmt(d) { return (d.getMonth() + 1) + "/" + d.getDate() + "(" + "日月火水木金土"[d.getDay()] + ")"; }
+  function fmtFull(d, withYear) { return (withYear ? d.getFullYear() + "/" : "") + fmt(d); }
+
+  function weekend(t) {
+    var dow = t.getDay(); // 0=Sun
+    var sat, sun;
+    if (dow === 0) { sun = t; sat = new Date(t.getTime() - DAY); }
+    else if (dow === 6) { sat = t; sun = new Date(t.getTime() + DAY); }
+    else { sat = new Date(t.getTime() + (6 - dow) * DAY); sun = new Date(sat.getTime() + DAY); }
+    return [sat, sun];
+  }
+
+  function period(e) {
+    var s = parse(e.start), end = e.end ? parse(e.end) : null;
+    var y = new Date().getFullYear();
+    var withYear = s.getFullYear() !== y || (end && end.getFullYear() !== y);
+    if (!end) return fmtFull(s, withYear) + " 〜(終了日未確認)";
+    if (e.start === e.end) return fmtFull(s, withYear);
+    return fmtFull(s, withYear) + " 〜 " + fmtFull(end, withYear);
+  }
+
+  function statusOf(e, t) {
+    var s = parse(e.start), end = e.end ? parse(e.end) : null;
+    if (s <= t && (!end || end >= t)) {
+      if (end && (end - t) / DAY <= 3) return "まもなく終了";
+      return "開催中";
+    }
+    var d = Math.round((s - t) / DAY);
+    return d <= 7 ? "あと" + d + "日で開始" : "";
+  }
+
+  function visible(e, t) {
+    if (e.end && parse(e.end) < t) return false; // 終了済みは非表示
+    if (state.cat !== "all" && e.categories.indexOf(state.cat) < 0) return false;
+    if (state.area !== "all" && e.area !== state.area) return false;
+    var s = parse(e.start), end = e.end ? parse(e.end) : null;
+    if (state.when === "now") return s <= t;
+    if (state.when === "weekend") {
+      var w = weekend(t);
+      return s <= w[1] && (!end || end >= w[0]);
+    }
+    return true;
+  }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function render() {
+    var t = today();
+    var items = window.EVENTS.filter(function (e) { return visible(e, t); });
+    items.sort(function (a, b) {
+      var ka = Math.max(parse(a.start), t), kb = Math.max(parse(b.start), t);
+      return ka - kb || parse(a.start) - parse(b.start);
+    });
+    var list = document.getElementById("list");
+    list.textContent = "";
+    document.getElementById("count").textContent = items.length + " 件";
+    if (!items.length) { list.appendChild(el("div", "empty", "条件に合うイベントはありません")); return; }
+
+    items.forEach(function (e) {
+      var card = el("article", "card");
+      var tags = el("div", "row");
+      var st = statusOf(e, t);
+      if (st) tags.appendChild(el("span", "tag status", st));
+      e.categories.forEach(function (c) {
+        tags.appendChild(el("span", "tag " + c, c === "family" ? "家族向け" : "グルメ"));
+      });
+      tags.appendChild(el("span", "tag area", e.area));
+      card.appendChild(tags);
+      card.appendChild(el("h2", null, e.title));
+      card.appendChild(el("div", "meta", "📅 " + period(e)));
+      card.appendChild(el("div", "meta", "📍 " + e.venue));
+      card.appendChild(el("div", "meta", "💴 " + e.price));
+      card.appendChild(el("p", "summary", e.summary));
+      var src = el("div", "src");
+      var a = el("a", null, "詳細(出典: " + e.source + ")");
+      a.href = e.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      src.appendChild(a);
+      card.appendChild(src);
+      list.appendChild(card);
+    });
+  }
+
+  function bindChips(containerId, key, attr) {
+    document.getElementById(containerId).addEventListener("click", function (ev) {
+      var b = ev.target.closest("button.chip");
+      if (!b) return;
+      state[key] = b.getAttribute(attr);
+      this.querySelectorAll("button.chip").forEach(function (x) {
+        x.setAttribute("aria-pressed", x === b ? "true" : "false");
+      });
+      render();
+    });
+  }
+
+  document.getElementById("updated").textContent = window.LAST_UPDATED.replace(/-/g, "/");
+  var areas = [];
+  window.EVENTS.forEach(function (e) { if (areas.indexOf(e.area) < 0) areas.push(e.area); });
+  var sel = document.getElementById("area");
+  areas.forEach(function (a) { var o = el("option", null, a); o.value = a; sel.appendChild(o); });
+  sel.addEventListener("change", function () { state.area = sel.value; render(); });
+  bindChips("cat-controls", "cat", "data-cat");
+  bindChips("when-controls", "when", "data-when");
+  render();
+})();
+</script>
+</body>
+</html>
