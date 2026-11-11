@@ -60,6 +60,8 @@
   <div class="controls" id="zone-controls"></div>
   <div class="group-label">時期</div>
   <div class="controls" id="time-controls"></div>
+  <div class="group-label">種類</div>
+  <div class="controls" id="cat-controls"></div>
   <div class="group-label">料金</div>
   <div class="controls" id="free-controls"></div>
 
@@ -92,7 +94,13 @@
     { key: "all", label: "すべて" },
     { key: "free", label: "無料のみ" }
   ];
-  var state = { zone: "all", time: "all", free: "all" };
+  var CATS = [
+    { key: "all", label: "すべて" },
+    { key: "family", label: "家族向け" },
+    { key: "gourmet", label: "グルメ" },
+    { key: "drink", label: "お酒" }
+  ];
+  var state = { zone: "all", time: "all", free: "all", cat: "all" };
 
   function parse(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function today() { var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
@@ -130,10 +138,11 @@
 
   function matches(e, t, f) {
     return alive(e, t) && (f.zone === "all" || e.zone === f.zone) && inTime(e, t, f.time) &&
-      (f.free === "all" || e.free === true);
+      (f.free === "all" || e.free === true) &&
+      (f.cat === "all" || e.categories.indexOf(f.cat) >= 0);
   }
   function withState(key, value) {
-    var f = { zone: state.zone, time: state.time, free: state.free };
+    var f = { zone: state.zone, time: state.time, free: state.free, cat: state.cat };
     f[key] = value;
     return f;
   }
@@ -165,6 +174,7 @@
     var t = today();
     renderChips("zone-controls", ZONES, "zone");
     renderChips("time-controls", TIMES, "time");
+    renderChips("cat-controls", CATS, "cat");
     renderChips("free-controls", FREES, "free");
 
     var items = window.EVENTS.filter(function (e) { return matches(e, t, state); });

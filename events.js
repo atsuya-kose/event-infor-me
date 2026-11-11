@@ -7,6 +7,51 @@ window.LAST_UPDATED = "2026-11-11";
 
 window.EVENTS = [
   {
+    id: "nishiogi-norakura-7-2026",
+    title: "西荻呑らりくらり(第7回)",
+    start: "2026-11-16", end: "2026-11-19",
+    zone: "local", area: "杉並区(西荻窪)",
+    venue: "西荻窪駅周辺の参加店(約59店)",
+    price: "2,000円(マイカップ持参で1,500円)・前売なし、カップとスタンプカードは北口で販売",
+    categories: ["drink"],
+    summary: "15:00〜23:59(最終日は23:00まで)。西荻窪のはしご酒イベント。最初の1杯は300円、スタンプ10個以上で抽選、店ごとの特別メニュー。",
+    url: "https://nishiogi-norakura.com/", source: "実行委員会サイト"
+  },
+  {
+    id: "ogikubo-kanpai-9-2026",
+    title: "荻窪で乾杯(第9回)",
+    start: "2026-11-24", end: "2026-11-27",
+    zone: "local", area: "杉並区(荻窪)",
+    venue: "荻窪駅周辺の参加店",
+    price: "乾杯チケット 前売5杯2,000円・11杯4,000円/当日5杯2,500円・11杯5,000円",
+    categories: ["drink"],
+    summary: "荻窪の街をチケット片手にはしご酒。参加店舗の詳細は公式SNSで確認。",
+    url: "https://eplus.jp/sf/detail/4624220001", source: "イープラス"
+  },
+  {
+    id: "asagaya-nomiyasan-27-2026",
+    title: "第27回 阿佐ヶ谷飲み屋さん祭り",
+    start: "2026-11-10", end: "2026-11-13",
+    zone: "local", area: "杉並区(阿佐ヶ谷)",
+    venue: "阿佐ヶ谷駅周辺の参加店(119店)",
+    price: "ちょい飲み券 前売5杯2,000円・10杯+おつまみ4,000円/当日5杯2,500円・10杯+おつまみ4,500円",
+    categories: ["drink"],
+    summary: "11/10〜12は通常開催、13は「一人飲み屋さん祭り」(おひとり様のみ参加可)。券を購入して参加店で利用するはしご酒。",
+    url: "https://prtimes.jp/main/html/rd/p/000000002.000192779.html", source: "PR TIMES"
+  },
+  {
+    id: "nishiogi-library-nichifil-1124",
+    free: true,
+    title: "日本フィル出張ロビーコンサート in 西荻図書館",
+    start: "2026-11-24", end: "2026-11-24",
+    zone: "local", area: "杉並区(西荻窪)",
+    venue: "西荻図書館(西荻北2-33-9)",
+    price: "無料・当日直接会場へ",
+    categories: ["family"],
+    summary: "15:30〜16:10。日本フィルの楽員による弦楽四重奏。座席の取り置き不可、混雑時は入場制限あり。",
+    url: "https://www.city.suginami.tokyo.jp/s030/event/28607.html", source: "杉並区公式"
+  },
+  {
     id: "futako-oyamamichi-fes-17-2026",
     free: true,
     title: "二子玉川大山みちフェスティバル(第17回)",
