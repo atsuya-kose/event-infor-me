@@ -7,6 +7,30 @@ window.LAST_UPDATED = "2026-11-11";
 
 window.EVENTS = [
   {
+    id: "futako-oyamamichi-fes-17-2026",
+    free: true,
+    title: "二子玉川大山みちフェスティバル(第17回)",
+    start: "2026-11-14", end: "2026-11-14",
+    zone: "local", area: "世田谷区(二子玉川)",
+    venue: "世田谷区立二子玉川小学校 校庭(玉川4-6-1)",
+    price: "来場無料(一部有料ブースあり)・申込不要",
+    categories: ["family"],
+    summary: "12:30〜15:00(開会式12:00)。地域の団体が出展する、大山みちにちなんだブースや体験ブース。雨天は体育館で縮小開催。自転車での来場は不可。",
+    url: "https://www.city.setagaya.lg.jp/03660/27555.html", source: "世田谷区公式"
+  },
+  {
+    id: "kamimachi-bosai-festa-2026",
+    free: true,
+    title: "上町地区防災フェスタ",
+    start: "2026-11-29", end: "2026-11-29",
+    zone: "local", area: "世田谷区(世田谷)",
+    venue: "天祖神社(世田谷1-23-5)ほか",
+    price: "無料・申込不要(雨天中止)",
+    categories: ["family"],
+    summary: "10:00〜12:00。防災体験ブース5つを回るスタンプラリー。大人も子どもも参加できる。",
+    url: "https://www.city.setagaya.lg.jp/01009/34286.html", source: "世田谷区公式"
+  },
+  {
     id: "nihonshu-hitomeguri-shinbashi-2026",
     free: false,
     title: "にほんしゅ ひと巡り ―新橋 2026―",
