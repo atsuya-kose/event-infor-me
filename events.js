@@ -29,6 +29,50 @@ window.EVENTS = [
     url: "https://www.city.suginami.tokyo.jp/s113/event/28335.html", source: "杉並区公式"
   },
   {
+    id: "ogikubo-center-matsuri-2026",
+    title: "おぎくぼセンターまつり",
+    start: "2026-11-15", end: "2026-11-15",
+    zone: "local", area: "杉並区",
+    venue: "荻窪地域区民センター(荻窪2-34-20)",
+    price: "無料(当日直接会場へ)",
+    categories: ["family", "gourmet"],
+    summary: "10:00〜15:00。10月にリニューアルした区民センターのお祭り。餅つき・獅子舞、屋台(綿菓子・焼きそば)、杉並新鮮野菜の販売、ステージ、天文講座・鉄道模型の展示やワークショップ。",
+    url: "https://www.city.suginami.tokyo.jp/s022/event/29644.html", source: "杉並区公式"
+  },
+  {
+    id: "suginami-kyodogeino-40-2026",
+    title: "第40回杉並郷土芸能大会",
+    start: "2026-11-15", end: "2026-11-15",
+    zone: "local", area: "杉並区",
+    venue: "セシオン杉並 ホール(梅里1-22-32)",
+    price: "記載なし(申込の要否は公式で確認)",
+    categories: ["family"],
+    summary: "13:00〜17:00(開場12:30)。区指定無形民俗文化財の里神楽、祭囃子、和太鼓などの郷土芸能を披露。",
+    url: "https://www.city.suginami.tokyo.jp/s113/event/27604.html", source: "杉並区公式"
+  },
+  {
+    id: "suginami-ko-matsuri-2026",
+    title: "杉っ子まつり(杉並第三小学校)",
+    start: "2026-11-15", end: "2026-11-15",
+    zone: "local", area: "杉並区",
+    venue: "杉並第三小学校(高円寺東児童館のお知らせ)",
+    price: "記載なし(児童館で確認)",
+    categories: ["family"],
+    summary: "児童館だよりに「11月15日(日)杉っ子まつり」とある子ども向けのお祭り。時間・内容の記載なし。うわばきを持参。",
+    url: "https://www.city.suginami.tokyo.jp/documents/3525/10kouenjihigasi2610.pdf", source: "杉並区 高円寺東児童館だより"
+  },
+  {
+    id: "takaido-puuk-puppet-1123",
+    title: "人形劇団プーク公演会(高井戸地域区民センター)",
+    start: "2026-11-23", end: "2026-11-23",
+    zone: "local", area: "杉並区",
+    venue: "高井戸地域区民センター 3階体育室(高井戸東3-7-5)/京王井の頭線高井戸駅から徒歩3分",
+    price: "記載なし(要事前申込。受付状況は公式で確認)",
+    categories: ["family"],
+    summary: "14:00〜15:25(受付13:30〜)。「三びきのやぎのがらがらどん」「ぼちぼちいこか」。小学生以下の方を1名以上含む家族が対象。",
+    url: "https://www.city.suginami.tokyo.jp/s025/event/27933.html", source: "杉並区公式"
+  },
+  {
     id: "futako-rise-xmas-2026",
     title: "二子玉川ライズ クリスマス2026",
     start: "2026-11-07", end: "2026-12-25",
