@@ -3,9 +3,33 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-11";
+window.LAST_UPDATED = "2026-11-12";
 
 window.EVENTS = [
+  {
+    id: "setagaya-kodomo-oshigoto-fes-2-2026",
+    free: true,
+    title: "第2回 世田谷こどもおしごとフェス",
+    start: "2026-11-29", end: "2026-11-29",
+    zone: "local", area: "世田谷区(池尻)",
+    venue: "HOME/WORK VILLAGE(旧池尻中学校跡地・池尻2-4-5)",
+    price: "参加費無料・時間と申込方法は公式サイトで確認",
+    categories: ["family"],
+    summary: "小中学生とその保護者向けの職業体験イベント。内容は変更になる場合あり、詳細は公式サイトに順次掲載。",
+    url: "https://report.iko-yo.net/articles/34094", source: "いこーよニュース"
+  },
+  {
+    id: "nishitokyo-kendama-free-1126",
+    free: true,
+    title: "けん玉無料体験(毎週木曜・西東京市田無)",
+    start: "2026-11-12", end: "2026-11-26",
+    zone: "local", area: "西東京市(田無)",
+    venue: "J:COMコール田無 4F(田無町3-7-2)",
+    price: "子ども・大人とも無料・要予約",
+    categories: ["family"],
+    summary: "毎週木曜の16:30〜18:00と19:00〜20:30。西東京けん玉クラブによる体験会。会場が西東京市民文化プラザに移る場合あり。",
+    url: "https://iko-yo.net/events/606120", source: "いこーよ"
+  },
   {
     id: "nishiogi-norakura-7-2026",
     title: "西荻呑らりくらり(第7回)",
