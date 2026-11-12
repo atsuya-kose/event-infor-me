@@ -626,4 +626,40 @@ window.EVENTS = [
     summary: "12:00〜22:00(11/7のみ16:30〜18:45は一時休場)。",
     url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
   }
+  {
+    id: "nozawa-haihai-1117",
+    free: true,
+    title: "野沢児童館 11月のはいはいひろば(11/17)",
+    start: "2026-11-17", end: "2026-11-17",
+    zone: "local", area: "世田谷区(野沢)",
+    venue: "野沢児童館 プレイルーム",
+    price: "無料・10:30〜11:30・申込方法欄は「無し」(17日のリフレッシュ体操は本文に「申込が必要」とあり、児童館に確認)",
+    categories: ["family"],
+    summary: "0歳児とその保護者、妊娠中の方が対象のおでかけひろば。",
+    url: "https://www.city.setagaya.lg.jp/03064/36074.html", source: "世田谷区公式"
+  },
+  {
+    id: "nozawa-yochiyochi-1125",
+    free: true,
+    title: "野沢児童館 11月のよちよちひろば(11/18・11/25)",
+    start: "2026-11-18", end: "2026-11-25",
+    zone: "local", area: "世田谷区(野沢)",
+    venue: "野沢児童館 プレイルームほか",
+    price: "無料・水曜10:30〜11:30・申込方法欄は「無し」",
+    categories: ["family"],
+    summary: "1・2歳児とその保護者が対象のおでかけひろば。",
+    url: "https://www.city.setagaya.lg.jp/03064/36075.html", source: "世田谷区公式"
+  },
+  {
+    id: "kasuya-kokko-1117",
+    free: true,
+    title: "粕谷児童館 11月「こっこひろば」(11/17)",
+    start: "2026-11-17", end: "2026-11-17",
+    zone: "local", area: "世田谷区(南烏山)",
+    venue: "粕谷児童館 プレイルーム・南烏山2丁目みんなのにわ緑地",
+    price: "無料・10:30〜11:30・事前申込なし、当日直接",
+    categories: ["family"],
+    summary: "1歳から就学前の子どもと保護者が対象。",
+    url: "https://www.city.setagaya.lg.jp/03085/36435.html", source: "世田谷区公式"
+  },
 ];
