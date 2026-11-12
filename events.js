@@ -625,7 +625,7 @@ window.EVENTS = [
     categories: ["gourmet", "family"],
     summary: "12:00〜22:00(11/7のみ16:30〜18:45は一時休場)。",
     url: "https://www.enjoytokyo.jp/feature/christmas/topics_market_free/", source: "レッツエンジョイ東京"
-  }
+  },
   {
     id: "nozawa-haihai-1117",
     free: true,
