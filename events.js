@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-12";
+window.LAST_UPDATED = "2026-11-14";
 
 window.EVENTS = [
   {
@@ -661,5 +661,28 @@ window.EVENTS = [
     categories: ["family"],
     summary: "1歳から就学前の子どもと保護者が対象。",
     url: "https://www.city.setagaya.lg.jp/03085/36435.html", source: "世田谷区公式"
+  },
+  {
+    id: "daitaminami-jidokan-wreath-1203",
+    free: true,
+    title: "代田南児童館「おいものつるでリースづくり」",
+    start: "2026-12-03", end: "2026-12-03",
+    zone: "local", area: "世田谷区(代田)",
+    venue: "代田南児童館",
+    price: "無料・児童館窓口で先着順受付(11/19 16:00〜)",
+    categories: ["family"],
+    summary: "15:00〜17:00に30分ごと5枠。対象は小学1年生〜中高生世代。直接来館して参加。",
+    url: "https://www.city.setagaya.lg.jp/03069/36571.html", source: "世田谷区公式"
+  },
+  {
+    id: "svb-tokyo-hop-autumn-fair-2026",
+    title: "日本産ホップと秋の味覚フェア(スプリングバレーブルワリー東京)",
+    start: "2026-11-09", end: "2026-11-30",
+    zone: "tokyo", area: "渋谷区(代官山)",
+    venue: "スプリングバレーブルワリー東京(SVB東京)",
+    price: "入場料の記載なし・メニューは単品(例: ピッツァ1,650円)",
+    categories: ["drink", "gourmet"],
+    summary: "日本産ホップのクラフトビールと秋の味覚メニュー。ビアフライト(飲み比べ)あり。予約の要否は記載なし。",
+    url: "https://www.walkerplus.com/article/1450739/amp/", source: "ウォーカープラス"
   },
 ];
