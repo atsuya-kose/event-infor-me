@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-14";
+window.LAST_UPDATED = "2026-11-15";
 
 window.EVENTS = [
   {
@@ -684,5 +684,28 @@ window.EVENTS = [
     categories: ["drink", "gourmet"],
     summary: "日本産ホップのクラフトビールと秋の味覚メニュー。ビアフライト(飲み比べ)あり。予約の要否は記載なし。",
     url: "https://www.walkerplus.com/article/1450739/amp/", source: "ウォーカープラス"
+  },
+  {
+    id: "enjoy-craft-nenmatsu-2026",
+    free: false,
+    title: "ENJOY! CRAFT 年末大感謝祭 2026(ブリュワーズナイト)",
+    start: "2026-12-08", end: "2026-12-08",
+    zone: "tokyo", area: "渋谷区(代官山)",
+    venue: "スプリングバレーブルワリー東京 2階(19:00〜21:30)",
+    price: "6,500円(税込)",
+    categories: ["drink", "gourmet"],
+    summary: "ブリュワーと交流できる感謝祭。ステーキ・ビュッフェと13種フリーフロー、お土産ビール付き。定員55人、要事前予約(電話またはWeb)。",
+    url: "https://www.enjoytokyo.jp/event/2091258/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "suginami-kodomo-mannaka-panel-2026",
+    title: "秋のこどもまんなか月間 パネル展(杉並区)",
+    start: "2026-11-24", end: "2026-11-27",
+    zone: "local", area: "杉並区",
+    venue: "区役所中棟2階 区民ギャラリー(9:00〜17:00、27日は16:00まで)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "杉並区子どもの権利に関する条例などを紹介するパネル展。",
+    url: "https://www.city.suginami.tokyo.jp/s053/news/29030.html", source: "杉並区公式"
   },
 ];
