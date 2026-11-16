@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-16";
+window.LAST_UPDATED = "2026-11-17";
 
 window.EVENTS = [
   {
@@ -707,5 +707,51 @@ window.EVENTS = [
     categories: ["family"],
     summary: "杉並区子どもの権利に関する条例などを紹介するパネル展。",
     url: "https://www.city.suginami.tokyo.jp/s053/news/29030.html", source: "杉並区公式"
+  },
+  {
+    id: "higashihara-xmas-market-2026",
+    free: false,
+    title: "大人も子供も楽しめるクリスマスマーケット(コミュニティふらっと東原)",
+    start: "2026-12-05", end: "2026-12-05",
+    zone: "local", area: "杉並区(下井草)",
+    venue: "コミュニティふらっと東原(下井草1-23-23・10:30〜14:30)",
+    price: "一部有料・親子参加型プログラム等は要事前申込(11/1〜12/5・窓口/電話/メール)",
+    categories: ["family", "gourmet"],
+    summary: "ミニコンサート、クリスマスのワークショップやゲーム、雑貨・食品の販売。",
+    url: "https://www.city.suginami.tokyo.jp/s020/event/28883.html", source: "杉並区公式"
+  },
+  {
+    id: "kamiyoga-tulip-1117",
+    free: true,
+    title: "上用賀児童館 チューリップひろば(公園で秋探し)",
+    start: "2026-11-17", end: "2026-11-17",
+    zone: "local", area: "世田谷区(上用賀)",
+    venue: "上用賀公園(雨天時は児童館内・10:30〜11:30)",
+    price: "無料・申込不要(当日参加)",
+    categories: ["family"],
+    summary: "歩き始めくらいの1歳以上の子と保護者向け。公園で秋探し。",
+    url: "https://www.city.setagaya.lg.jp/03074/36256.html", source: "世田谷区公式"
+  },
+  {
+    id: "sesion-xmas-family-concert-2026",
+    title: "セシオン杉並 クリスマスファミリーコンサート2026",
+    start: "2026-12-13", end: "2026-12-13",
+    zone: "local", area: "杉並区",
+    venue: "セシオン杉並",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "ファミリーで楽しめるクリスマスコンサート。",
+    url: "https://www.enjoytokyo.jp/event/2092373/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "koenji-xmas-marche-masita-2026",
+    title: "クリスマスマルシェ in 高円寺マシタ",
+    start: "2026-12-24", end: "2026-12-24",
+    zone: "local", area: "杉並区(高円寺)",
+    venue: "記載なし(最寄駅は高円寺)",
+    price: "記載なし(公式で確認)",
+    categories: ["gourmet"],
+    summary: "高円寺で出会うクリスマスのマルシェ(詳細は公式で確認)。",
+    url: "https://www.enjoytokyo.jp/event/2091383/", source: "ENJOY TOKYO"
   },
 ];
