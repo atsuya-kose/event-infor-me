@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-17";
+window.LAST_UPDATED = "2026-11-18";
 
 window.EVENTS = [
   {
@@ -112,18 +112,6 @@ window.EVENTS = [
     url: "https://www.bcnretail.com/market/detail/20261001_665107.html", source: "BCN+R"
   },
   // ===== 杉並区・世田谷区・吉祥寺周辺 =====
-  {
-    id: "setabun-jazz-0sai-2026",
-    free: false,
-    title: "0才からのジャズコンサート 世田谷 2026",
-    start: "2026-11-11", end: "2026-11-11",
-    zone: "local", area: "世田谷区",
-    venue: "世田谷文学館(南烏山1-10-10)/京王線芦花公園駅から徒歩5分",
-    price: "大人1,800円、子ども(0歳〜小学生)300円(当日は各+500円)",
-    categories: ["family"],
-    summary: "赤ちゃんから大人まで楽しめるジャズ。午前10:30〜と午後15:30〜の2回。ベビーカー置場・授乳コーナー・おむつ替えコーナーあり。",
-    url: "https://iko-yo.net/events/601853", source: "いこーよ"
-  },
   {
     id: "suginami-ehon-live-amanuma-2026",
     free: true,
@@ -753,5 +741,150 @@ window.EVENTS = [
     categories: ["gourmet"],
     summary: "高円寺で出会うクリスマスのマルシェ(詳細は公式で確認)。",
     url: "https://www.enjoytokyo.jp/event/2091383/", source: "ENJOY TOKYO"
+  },
+  // ===== 2026-11-18 追加 =====
+  {
+    id: "setagaya-gourmet-marche-2026",
+    free: true,
+    title: "SETAGAYA LIFE SELECTION -グルメマルシェ-",
+    start: "2026-11-21", end: "2026-11-22",
+    zone: "local", area: "世田谷区(世田谷)",
+    venue: "世田谷区役所本庁舎 広場・ピロティ(世田谷4-21-27)",
+    price: "入場無料(予約の記載なし)",
+    categories: ["gourmet", "family", "drink"],
+    summary: "11:00〜18:00。世田谷の店のスイーツ・パン・カレー・タコス・コーヒー・クラフトビール・ワインなど約29ブース。子ども向け縁日、フラワーアレンジのワークショップ、スポーツ体験も。",
+    url: "https://bestcalendar.jp/press/165181", source: "ベストカレンダー"
+  },
+  {
+    id: "ojiya-fair-1122",
+    free: true,
+    title: "おぢやフェア(小千谷市の特産品販売)",
+    start: "2026-11-22", end: "2026-11-22",
+    zone: "local", area: "杉並区(井草)",
+    venue: "小千谷学生寮(井草4-16-23)",
+    price: "無料・当日直接会場へ(売切次第終了、車での来場不可)",
+    categories: ["gourmet"],
+    summary: "11:00〜13:30。新潟県小千谷市の特産品の販売。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "azuma-asaichi-1126",
+    free: true,
+    title: "吾妻の朝市(東吾妻町の特産・農産品)",
+    start: "2026-11-26", end: "2026-11-26",
+    zone: "local", area: "杉並区",
+    venue: "杉並区役所 中杉通り側入口",
+    price: "無料・当日直接(売切次第終了)",
+    categories: ["gourmet"],
+    summary: "10:00〜14:00。群馬県東吾妻町の特産品・農産品の販売。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "narita-nogyo-koen-shukaku-2026",
+    free: true,
+    title: "農業公園「収穫祭」",
+    start: "2026-11-28", end: "2026-11-28",
+    zone: "local", area: "杉並区(成田西)",
+    venue: "成田西ふれあい農業公園(成田西3-18-9)",
+    price: "無料・当日直接会場へ(小学生以下は保護者同伴)",
+    categories: ["family", "gourmet"],
+    summary: "10:30〜12:30。野菜・焼き芋・けんちん汁の販売など。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "takaido-oyako-sports-1129",
+    free: true,
+    title: "親子スポーツチャレンジ!(元バスケ日本代表・池田麻美氏)",
+    start: "2026-11-29", end: "2026-11-29",
+    zone: "local", area: "杉並区(久我山)",
+    venue: "高井戸第二小学校(久我山4-49-1)",
+    price: "無料・要事前申込(Eメール、11/26まで・申込順20組・雨天中止)",
+    categories: ["family"],
+    summary: "14:00〜15:30。区内在住・在園の3歳〜就学前の子と保護者が対象。申込期限が過ぎている可能性があるため公式で確認。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "asagaya-illumi-2026",
+    free: true,
+    title: "阿佐谷イルミネーション",
+    start: "2026-12-01", end: "2027-01-31",
+    zone: "local", area: "杉並区(阿佐ケ谷)",
+    venue: "JR阿佐ケ谷駅南口 噴水広場ほか",
+    price: "無料",
+    categories: ["family"],
+    summary: "日没後に点灯。12/1の16:30から点灯式(ペンライトを先着700名に配布)。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "ogikubo-illumi-2026",
+    free: true,
+    title: "荻窪イルミネーション",
+    start: "2026-12-01", end: "2027-02-28",
+    zone: "local", area: "杉並区(荻窪)",
+    venue: "荻窪駅北口 駅前広場",
+    price: "無料",
+    categories: ["family"],
+    summary: "日没後に点灯。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "nishiogi-kitaginza-illumi-2026",
+    free: true,
+    title: "商友会イルミ祭り(西荻北銀座)",
+    start: "2026-12-01", end: "2027-01-31",
+    zone: "local", area: "杉並区(西荻窪)",
+    venue: "西荻北銀座商友会(西荻北3丁目)",
+    price: "無料",
+    categories: ["family"],
+    summary: "日没後に点灯する商店街のイルミネーション。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "zenpukuji-tankentai-1206",
+    free: false,
+    title: "善福寺公園探検隊「渡り鳥」パタパタ鳥を作ろう!",
+    start: "2026-12-06", end: "2026-12-06",
+    zone: "local", area: "杉並区",
+    venue: "善福寺公園",
+    price: "1組500円・要事前申込(Eメール、12/5まで・申込順15組)",
+    categories: ["family"],
+    summary: "10:00〜12:00。区内在住・在勤・在学の3歳以上が対象(小3以下は保護者同伴)。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "suginami-ehon-live-chuo-1220",
+    free: true,
+    title: "絵本ライブ 親と子でたのしむおはなし会(中央図書館)",
+    start: "2026-12-20", end: "2026-12-20",
+    zone: "local", area: "杉並区(荻窪)",
+    venue: "杉並区立中央図書館(荻窪3-40-23)",
+    price: "無料・要事前申込(Eメール、12/16まで・申込順20組)",
+    categories: ["family"],
+    summary: "10:30〜11:10。参加者全員の氏名・年齢をメールに記入して申込。",
+    url: "https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf", source: "広報すぎなみ 2026/11/15号"
+  },
+  {
+    id: "nozawa-haihai-dec",
+    free: true,
+    title: "野沢児童館 12月のはいはいひろば(12/1・12/8)",
+    start: "2026-12-01", end: "2026-12-08",
+    zone: "local", area: "世田谷区(野沢)",
+    venue: "野沢児童館 プレイルーム",
+    price: "無料・火曜10:30〜11:30・申込方法欄は「無し」(ページ冒頭に「事前申込必要」の表示もあり、児童館に確認)",
+    categories: ["family"],
+    summary: "0歳児とその保護者、妊娠中の方が対象。12/1は身長・体重測定とお誕生日会、12/8は足形カレンダーづくり。",
+    url: "https://www.city.setagaya.lg.jp/03064/36685.html", source: "世田谷区公式"
+  },
+  {
+    id: "nozawa-yochiyochi-dec",
+    free: true,
+    title: "野沢児童館 12月のよちよちひろば(12/2・12/9)",
+    start: "2026-12-02", end: "2026-12-09",
+    zone: "local", area: "世田谷区(野沢)",
+    venue: "野沢児童館 プレイルームほか",
+    price: "無料・水曜10:30〜11:30・申込方法欄は「無し」(ページ冒頭に「事前申込必要」の表示もあり、児童館に確認)",
+    categories: ["family"],
+    summary: "1・2歳児とその保護者が対象。12/2はお誕生日会、12/9は年末おたのしみ会。",
+    url: "https://www.city.setagaya.lg.jp/03064/36686.html", source: "世田谷区公式"
   },
 ];
