@@ -3,9 +3,105 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-18";
+window.LAST_UPDATED = "2026-11-19";
 
 window.EVENTS = [
+  {
+    id: "hachioji-ichou-matsuri-2026",
+    free: true,
+    title: "八王子いちょう祭り",
+    start: "2026-11-21", end: "2026-11-22",
+    zone: "tokyo", area: "八王子市",
+    venue: "甲州街道(追分町〜高尾駅入口)周辺",
+    price: "無料(関所オリエンテーリングの通行手形は別料金)",
+    categories: ["family"],
+    summary: "11/21は9:00〜16:30、11/22は9:00〜16:00。甲州街道沿いで開かれる秋の祭り。",
+    url: "https://www.ichou-festa.org/event", source: "八王子いちょう祭り公式"
+  },
+  {
+    id: "komazawa-fantasia-2026",
+    free: true,
+    title: "駒沢ファンタジア2026",
+    start: "2026-11-28", end: "2026-11-29",
+    zone: "local", area: "世田谷区(駒沢)",
+    venue: "駒沢オリンピック公園 中央広場",
+    price: "参加費無料(ブースの販売・体験は有料の場合あり)・受付なし",
+    categories: ["family"],
+    summary: "10:00〜16:00。小雨決行、荒天時は中止(前日12時に告知)。",
+    url: "https://konomachi-note.jp/tokyo/guides/event-11gatsu-2026-tokyo/", source: "このまちノート"
+  },
+  {
+    id: "hibiya-art-park-2026",
+    free: true,
+    title: "Hibiya Art Park 2026 花と光のムーブメント",
+    start: "2026-11-13", end: "2026-11-29",
+    zone: "tokyo", area: "千代田区(日比谷)",
+    venue: "日比谷公園",
+    price: "入場無料・予約不要",
+    categories: ["family"],
+    summary: "9:00〜21:00。日比谷公園で花と光を楽しむ催し。",
+    url: "https://www.tokyo-park.or.jp/special/flowerandlight/hibiya2026autumn/index.html", source: "東京都公園協会"
+  },
+  {
+    id: "iga-ueno-ninja-festa-2026",
+    free: true,
+    title: "伊賀上野NINJAフェスタ2026",
+    start: "2026-11-21", end: "2026-11-23",
+    zone: "tokyo", area: "台東区(上野)",
+    venue: "上野恩賜公園 竹の台広場",
+    price: "入場無料・購入品などは有料",
+    categories: ["family","gourmet","drink"],
+    summary: "10:00〜18:00(最終日は一部16:30まで)。伊賀産のグルメやお酒の販売あり。",
+    url: "https://www.enjoytokyo.jp/event/2089569/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "tokyo-shukakusai-2026",
+    free: true,
+    title: "TOKYO周穫祭2026",
+    start: "2026-11-21", end: "2026-11-22",
+    zone: "tokyo", area: "千代田区(有楽町)",
+    venue: "東京国際フォーラム",
+    price: "入場無料",
+    categories: ["family","gourmet"],
+    summary: "10:00〜18:00(22日は17:00まで)。キッチンカーが並び、親子向けワークショップもある。",
+    url: "https://www.enjoytokyo.jp/event/2088311/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "nippon-zenkoku-bussan-2026",
+    free: true,
+    title: "ニッポン全国物産展2026",
+    start: "2026-11-20", end: "2026-11-22",
+    zone: "tokyo", area: "豊島区(池袋)",
+    venue: "サンシャインシティ 展示ホールA・B",
+    price: "入場無料(飲食は別途)",
+    categories: ["gourmet","drink"],
+    summary: "10:00〜19:00(最終日は18:00まで)。フードコートや、お酒と楽しむ「酒ズキ横丁」あり。",
+    url: "https://www.enjoytokyo.jp/event/919068/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "takahata-momiji-2026",
+    free: true,
+    title: "高幡不動尊 もみじまつり",
+    start: "2026-11-18", end: "2026-11-30",
+    zone: "tokyo", area: "日野市(高幡不動)",
+    venue: "高幡不動尊 金剛寺",
+    price: "無料の表記あり",
+    categories: ["family"],
+    summary: "9:00〜17:00。",
+    url: "https://www.enjoytokyo.jp/event/384689/", source: "ENJOY TOKYO"
+  },
+  {
+    id: "tokyo-red-garden-2026",
+    free: true,
+    title: "TOKYO RED GARDEN 2026",
+    start: "2026-11-27", end: "2026-12-06",
+    zone: "tokyo", area: "港区(白金台)",
+    venue: "八芳園",
+    price: "無料(一部体験は別料金)",
+    categories: ["family"],
+    summary: "八芳園で開かれる秋の催し。",
+    url: "https://happo-en.com/tokyoredgarden2026", source: "八芳園"
+  },
   {
     id: "setagaya-kodomo-oshigoto-fes-2-2026",
     free: true,
