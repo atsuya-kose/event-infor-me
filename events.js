@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-19";
+window.LAST_UPDATED = "2026-11-20";
 
 window.EVENTS = [
   {
@@ -149,17 +149,6 @@ window.EVENTS = [
     url: "https://eplus.jp/sf/detail/4624220001", source: "イープラス"
   },
   {
-    id: "asagaya-nomiyasan-27-2026",
-    title: "第27回 阿佐ヶ谷飲み屋さん祭り",
-    start: "2026-11-10", end: "2026-11-13",
-    zone: "local", area: "杉並区(阿佐ヶ谷)",
-    venue: "阿佐ヶ谷駅周辺の参加店(119店)",
-    price: "ちょい飲み券 前売5杯2,000円・10杯+おつまみ4,000円/当日5杯2,500円・10杯+おつまみ4,500円",
-    categories: ["drink"],
-    summary: "11/10〜12は通常開催、13は「一人飲み屋さん祭り」(おひとり様のみ参加可)。券を購入して参加店で利用するはしご酒。",
-    url: "https://prtimes.jp/main/html/rd/p/000000002.000192779.html", source: "PR TIMES"
-  },
-  {
     id: "nishiogi-library-nichifil-1124",
     free: true,
     title: "日本フィル出張ロビーコンサート in 西荻図書館",
@@ -208,18 +197,6 @@ window.EVENTS = [
     url: "https://www.bcnretail.com/market/detail/20261001_665107.html", source: "BCN+R"
   },
   // ===== 杉並区・世田谷区・吉祥寺周辺 =====
-  {
-    id: "suginami-ehon-live-amanuma-2026",
-    free: true,
-    title: "「絵本ライブ天沼」対話式でおはなし会",
-    start: "2026-11-13", end: "2026-11-13",
-    zone: "local", area: "杉並区",
-    venue: "子ども・子育てプラザ天沼 マルチルーム(天沼3-19-16)",
-    price: "記載なし(公式で確認)",
-    categories: ["family"],
-    summary: "14:30〜15:10。対話式の絵本の読み語り。子育て中の親子と絵本好きの方が対象。当日直接会場へ(定員35名)。",
-    url: "https://www.city.suginami.tokyo.jp/s113/event/28335.html", source: "杉並区公式"
-  },
   {
     id: "ogikubo-center-matsuri-2026",
     free: true,
