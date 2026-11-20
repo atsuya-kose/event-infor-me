@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-20";
+window.LAST_UPDATED = "2026-11-21";
 
 window.EVENTS = [
   {
@@ -115,15 +115,15 @@ window.EVENTS = [
     url: "https://report.iko-yo.net/articles/34094", source: "いこーよニュース"
   },
   {
-    id: "nishitokyo-kendama-free-1126",
+    id: "nishitokyo-kendama-free-1224",
     free: true,
     title: "けん玉無料体験(毎週木曜・西東京市田無)",
-    start: "2026-11-12", end: "2026-11-26",
+    start: "2026-11-12", end: "2026-12-24",
     zone: "local", area: "西東京市(田無)",
     venue: "J:COMコール田無 4F(田無町3-7-2)",
     price: "子ども・大人とも無料・要予約",
     categories: ["family"],
-    summary: "毎週木曜の16:30〜18:00と19:00〜20:30。西東京けん玉クラブによる体験会。会場が西東京市民文化プラザに移る場合あり。",
+    summary: "毎週木曜の16:30〜18:00と19:00〜20:30(12/17のみ2枠目は19:30〜)。12/24まで開催。会場が西東京市民文化プラザに移る場合あり。",
     url: "https://iko-yo.net/events/606120", source: "いこーよ"
   },
   {
@@ -159,18 +159,6 @@ window.EVENTS = [
     categories: ["family"],
     summary: "15:30〜16:10。日本フィルの楽員による弦楽四重奏。座席の取り置き不可、混雑時は入場制限あり。",
     url: "https://www.city.suginami.tokyo.jp/s030/event/28607.html", source: "杉並区公式"
-  },
-  {
-    id: "futako-oyamamichi-fes-17-2026",
-    free: true,
-    title: "二子玉川大山みちフェスティバル(第17回)",
-    start: "2026-11-14", end: "2026-11-14",
-    zone: "local", area: "世田谷区(二子玉川)",
-    venue: "世田谷区立二子玉川小学校 校庭(玉川4-6-1)",
-    price: "来場無料(一部有料ブースあり)・申込不要",
-    categories: ["family"],
-    summary: "12:30〜15:00(開会式12:00)。地域の団体が出展する、大山みちにちなんだブースや体験ブース。雨天は体育館で縮小開催。自転車での来場は不可。",
-    url: "https://www.city.setagaya.lg.jp/03660/27555.html", source: "世田谷区公式"
   },
   {
     id: "kamimachi-bosai-festa-2026",
@@ -959,5 +947,74 @@ window.EVENTS = [
     categories: ["family"],
     summary: "1・2歳児とその保護者が対象。12/2はお誕生日会、12/9は年末おたのしみ会。",
     url: "https://www.city.setagaya.lg.jp/03064/36686.html", source: "世田谷区公式"
+  },
+  {
+    id: "ogikubo-science-engichi-1219",
+    free: true,
+    title: "科学で遊ぼう!さいえんす縁日(荻窪地域区民センター)",
+    start: "2026-12-19", end: "2026-12-19",
+    zone: "local", area: "杉並区(荻窪)",
+    venue: "荻窪地域区民センター",
+    price: "無料・申込不要(当日直接会場へ)",
+    categories: ["family"],
+    summary: "12:00〜15:00。ホバークラフトやモーターカー、科学読み聞かせなどの科学遊び。未就学児は保護者同伴。",
+    url: "https://www.city.suginami.tokyo.jp/s022/event/29249.html", source: "杉並区公式"
+  },
+  {
+    id: "sesion-xmas-kai-1213",
+    title: "セシオンクリスマス会(セシオン杉並)",
+    start: "2026-12-13", end: "2026-12-13",
+    zone: "local", area: "杉並区(梅里)",
+    venue: "セシオン杉並 展示室",
+    price: "申込不要・入退場自由(料金の記載なし)",
+    categories: ["family"],
+    summary: "11:00〜15:00。ゴスペルクワイヤの演奏、子どものダンス、人形劇など。",
+    url: "https://www.city.suginami.tokyo.jp/s024/event/29061.html", source: "杉並区公式"
+  },
+  {
+    id: "kamimachi-mini-messe-1219",
+    free: true,
+    title: "上町児童館 地域子育てミニメッセ「なんとかなるなるみんなで子育て」",
+    start: "2026-12-19", end: "2026-12-19",
+    zone: "local", area: "世田谷区(上町)",
+    venue: "上町児童館 3階トレーニングホール",
+    price: "無料・申込不要(直接会場へ)",
+    categories: ["family"],
+    summary: "10:30〜12:00。0歳〜未就学児と保護者、マタニティの方向け。おでかけひろばや子育てサポーターと交流・情報交換できる。",
+    url: "https://www.city.setagaya.lg.jp/03065/36893.html", source: "世田谷区公式"
+  },
+  {
+    id: "kamimachi-nenmatsu-paopaon-1226",
+    free: true,
+    title: "上町児童館「年末パオパオ~ン大お楽しみ会!!」",
+    start: "2026-12-26", end: "2026-12-26",
+    zone: "local", area: "世田谷区(上町)",
+    venue: "上町児童館",
+    price: "無料・要事前申込(12/5 14:00〜12/19、本人が児童館へ直接)",
+    categories: ["family"],
+    summary: "14:00〜18:00。小学1年生〜中高生世代向け。大掃除、おやつ作り、工作、集団遊び、ジャグリングなど。",
+    url: "https://www.city.setagaya.lg.jp/03065/36882.html", source: "世田谷区公式"
+  },
+  {
+    id: "kichijoji-okashi-no-ie-2026",
+    title: "アイシングクッキーで作る“お菓子の家”(吉祥寺)",
+    start: "2026-12-06", end: "2026-12-13",
+    zone: "local", area: "武蔵野市(吉祥寺)",
+    venue: "B1 Jo-ji PLAZA(吉祥寺本町2-4-14)",
+    price: "1人3,000円(お菓子の家1つ)・要予約(各回5組限定、12/6回は12/5、12/13回は12/12締切)",
+    categories: ["family","gourmet"],
+    summary: "12/6・12/13の午前〜昼の各回。アイシングクッキー7枚とお菓子パーツで手作りのお菓子の家を作るワークショップ。",
+    url: "https://iko-yo.net/events/609611", source: "いこーよ"
+  },
+  {
+    id: "grandberry-xmas-2026",
+    title: "Grandberry Christmas「Together This Holiday」",
+    start: "2026-11-14", end: "2026-12-25",
+    zone: "tokyo", area: "町田市(グランベリーパーク)",
+    venue: "グランベリーパーク(町田市鶴間)",
+    price: "記載なし(公式で確認)",
+    categories: ["family"],
+    summary: "10:00〜22:00。スヌーピーと仲間たちがテーマ。イルミネーションの道、高さ約8mのツリー、ワークショップ、クリスマスマーケットなど。",
+    url: "https://report.iko-yo.net/articles/35494", source: "いこーよ"
   },
 ];
