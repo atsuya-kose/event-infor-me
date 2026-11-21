@@ -87,6 +87,8 @@
   ];
   var TIMES = [
     { key: "all", label: "すべて" },
+    { key: "today", label: "今日" },
+    { key: "tomorrow", label: "明日" },
     { key: "week", label: "直近1週間" },
     { key: "later", label: "1週間以上先" }
   ];
@@ -130,6 +132,10 @@
 
   function inTime(e, t, key) {
     if (key === "all") return true;
+    if (key === "today" || key === "tomorrow") {
+      var d = new Date(t.getTime() + (key === "tomorrow" ? DAY : 0));
+      return parse(e.start) <= d && d <= parse(e.end || e.start);
+    }
     var limit = new Date(t.getTime() + 7 * DAY);
     var s = parse(e.start);
     if (key === "week") return s <= limit;     // 今日〜7日後に開催中 or 開始

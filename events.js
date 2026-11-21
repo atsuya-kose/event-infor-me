@@ -7,6 +7,18 @@ window.LAST_UPDATED = "2026-11-21";
 
 window.EVENTS = [
   {
+    id: "yotsuba-milk-fair-tokyo-2026",
+    free: true,
+    title: "よつ葉ミルクフェア in Tokyo",
+    start: "2026-11-21", end: "2026-11-22",
+    zone: "tokyo", area: "渋谷区(恵比寿)",
+    venue: "恵比寿ガーデンプレイス センター広場",
+    price: "参加無料",
+    categories: ["family", "gourmet"],
+    summary: "11:00〜17:00。北海道の酪農家と交流できる。牛の模型での模擬搾乳体験、牛乳・乳製品の試飲試食、キャラクター「みるる」のグリーティング。",
+    url: "https://report.iko-yo.net/articles/35534", source: "いこーよおでかけ"
+  },
+  {
     id: "hachioji-ichou-matsuri-2026",
     free: true,
     title: "八王子いちょう祭り",
