@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-22";
+window.LAST_UPDATED = "2026-11-23";
 
 window.EVENTS = [
   {"id":"suginami-hitorioya-xmas-2026","title":"ひとり親家庭のクリスマス会","start":"2026-12-13","end":"2026-12-13","zone":"local","area":"杉並区","venue":"高井戸地域区民センター","price":"無料(要事前申込・往復はがき・11/27必着・抽選・定員20名)","categories":["family"],"summary":"区内在住のひとり親家庭の小学生以下の子と保護者向けのクリスマス会。13:30〜15:00。","url":"https://www.city.suginami.tokyo.jp/s053/event/29333.html","source":"杉並区公式","free":true},
@@ -75,5 +75,7 @@ window.EVENTS = [
   {"id":"setagaya-nozawa-zaji-cooking-dec-2026","title":"野沢児童館 ざじクッキング「あんバタークリームケーキ」","start":"2026-12-19","end":"2026-12-19","zone":"local","area":"世田谷区","venue":"野沢児童館","price":"無料(要申込・11/25 16:00受付開始〜12/10締切)","categories":["family","gourmet"],"summary":"小学生〜対象のクッキング。15:00〜17:00。","url":"https://www.city.setagaya.lg.jp/03064/36693.html","source":"世田谷区公式","free":true},
   {"id":"rikugien-night-2026","title":"庭紅葉の六義園 夜間特別鑑賞","start":"2026-11-25","end":"2026-12-06","zone":"tokyo","area":"文京区","venue":"六義園","price":"前売1,000円/当日1,200円(小学生以下無料)","categories":["family"],"summary":"紅葉ライトアップ、抹茶茶屋、屋台・キッチンカー、プロジェクションマッピング。18:00〜20:30。","url":"https://www.enjoytokyo.jp/feature/matsuri_autumn/cal_nov_tokyo/","source":"ENJOY TOKYO","free":false},
   {"id":"hachoen-red-garden-2026","title":"TOKYO RED GARDEN 2026(八芳園)","start":"2026-11-27","end":"2026-12-06","zone":"tokyo","area":"港区","venue":"八芳園","price":"ガーデンライトアップは入場無料(特別コースは8,800円)","categories":["gourmet"],"summary":"日本庭園を橙〜赤にライトアップ。日没〜21時。","url":"https://www.enjoytokyo.jp/feature/matsuri_autumn/cal_nov_tokyo/","source":"ENJOY TOKYO","free":true},
-  {"id":"takao-momiji-2026","title":"高尾山もみじまつり","start":"2026-10-24","end":"2026-12-13","zone":"tokyo","area":"八王子市","venue":"高尾山","price":"記載なし(公式で確認)","categories":["family"],"summary":"柴燈護摩、限定くじ、ケーブルカー沿線の紅葉ライトアップなど。","url":"https://www.enjoytokyo.jp/feature/matsuri_autumn/cal_nov_tokyo/","source":"ENJOY TOKYO"}
+  {"id":"takao-momiji-2026","title":"高尾山もみじまつり","start":"2026-10-24","end":"2026-12-13","zone":"tokyo","area":"八王子市","venue":"高尾山","price":"記載なし(公式で確認)","categories":["family"],"summary":"柴燈護摩、限定くじ、ケーブルカー沿線の紅葉ライトアップなど。","url":"https://www.enjoytokyo.jp/feature/matsuri_autumn/cal_nov_tokyo/","source":"ENJOY TOKYO"},
+  {"id":"kunitachi-ongaku-fes-2026","title":"じぶんの音をつくろう!ワクワク音楽フェス(5市共同事業・子ども体験塾)","start":"2026-12-19","end":"2026-12-20","zone":"tokyo","area":"国立市","venue":"FSXホール(国立市富士見台)","price":"参加費無料(物販・DIYキットは有料・要事前申込・12/4締切・抽選・完全入替制)","categories":["family"],"summary":"武蔵野市・三鷹市・小金井市・国分寺市・国立市の小中学生と保護者向け。午前10:00〜13:30/午後14:00〜17:30。","url":"https://resemom.jp/article/2026/11/17/88334.html","source":"リセマム","free":true},
+  {"id":"suginami-oyako-ritmic-2026","title":"親子リトミック まゆ先生カラフル音楽室(コミュニティふらっと東原)","start":"2026-12-23","end":"2026-12-23","zone":"local","area":"杉並区","venue":"コミュニティふらっと東原","price":"料金の記載なし(事前申込)","categories":["family"],"summary":"親子で楽しむリトミック。杉並区のイベントカレンダーに掲載。","url":"https://www.city.suginami.tokyo.jp/s020/event/25428.html","source":"杉並区公式"}
 ];
