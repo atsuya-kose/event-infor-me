@@ -3,7 +3,7 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-25";
+window.LAST_UPDATED = "2026-11-26";
 
 window.EVENTS = [
   {"id":"suginami-hitorioya-xmas-2026","title":"ひとり親家庭のクリスマス会","start":"2026-12-13","end":"2026-12-13","zone":"local","area":"杉並区","venue":"高井戸地域区民センター","price":"無料(要事前申込・往復はがき・11/27必着・抽選・定員20名)","categories":["family"],"summary":"区内在住のひとり親家庭の小学生以下の子と保護者向けのクリスマス会。13:30〜15:00。","url":"https://www.city.suginami.tokyo.jp/s053/event/29333.html","source":"杉並区公式","free":true},
@@ -96,4 +96,8 @@ window.EVENTS = [
   {"id":"odaiba-yakei-illumi-2026","title":"お台場イルミネーション \"YAKEI\"","start":"2026-12-01","end":"2027-04-04","zone":"tokyo","area":"港区","venue":"デックス東京ビーチ","price":"記載なし(公式で確認)","categories":["family"],"summary":"冬のウィンターイルミネーション。","url":"https://www.enjoytokyo.jp/event/383581/","source":"ENJOY TOKYO"},
   {"id":"tokyobay-light-wish-2026","title":"TokyoBay Light Wish","start":"2026-12-10","end":"2026-12-31","zone":"tokyo","area":"港区","venue":"シンボルプロムナード公園ほか","price":"記載なし(公式で確認)","categories":["family"],"summary":"高さ約40mのライトツリー。12/10ソフトオープン、12/18グランドオープン。","url":"https://www.enjoytokyo.jp/event/2092994/","source":"ENJOY TOKYO"},
   {"id":"odaiba-rainbow-fireworks-2026","title":"お台場レインボー花火2026","start":"2026-12-05","end":"2026-12-26","zone":"tokyo","area":"港区","venue":"台場","price":"記載なし(公式で確認)","categories":["family"],"summary":"12/5・12・19・26の19:00に約5分間の花火(12/19は音楽花火)。","url":"https://www.enjoytokyo.jp/event/2092286/","source":"ENJOY TOKYO"},
+  {"id":"kugayama-mottainai-bazaar-2026","title":"もったいないをつなげよう 地域交流バザー(ゆうゆう久我山館)","start":"2026-11-29","end":"2026-11-29","zone":"local","area":"杉並区","venue":"ゆうゆう久我山館(久我山5-8-8)","price":"料金の記載なし(申込不要・当日直接会場へ)","categories":["family"],"summary":"10:00〜14:30。売上は社会福祉協議会などへ寄付。無償の子ども用品もあり、どなたでも参加可。","url":"https://www.city.suginami.tokyo.jp/s038/event/28653.html","source":"杉並区公式"},
+  {"id":"svb-hop-autumn-fair-2026","title":"日本産ホップと秋の味覚フェア(スプリングバレーブルワリー東京)","start":"2026-11-09","end":"2026-11-30","zone":"tokyo","area":"渋谷区","venue":"スプリングバレーブルワリー東京(代官山)","price":"メニュー個別価格(お月見つくね900円など)","categories":["drink","gourmet"],"summary":"日本産ホップを使ったビールと秋の味覚のフェア。ビアフライトの価格は記載なし。","url":"https://www.walkerplus.com/article/1450739/","source":"ウォーカープラス"},
+  {"id":"toyota-arena-winter-light-2026","title":"TOYOTA ARENA TOKYO Winter Light 2026","start":"2026-12-07","end":"2027-02-14","zone":"tokyo","area":"江東区","venue":"TOYOTA ARENA TOKYO","price":"記載なし(公式で確認)","categories":["family"],"summary":"青海のアリーナ周辺で行われるウィンターイルミネーション。","url":"https://www.enjoytokyo.jp/event/2092992/","source":"ENJOY TOKYO"},
+  {"id":"conan-land-diver-city-2026","title":"名探偵コナンランド2026(ダイバーシティ東京 プラザ会場)","start":"2026-12-25","end":"2027-01-11","zone":"tokyo","area":"江東区","venue":"ダイバーシティ東京 プラザ","price":"記載なし(公式で確認)","categories":["family"],"summary":"お台場で開かれるコナンのイベント。他会場は期間が異なる。","url":"https://www.enjoytokyo.jp/event/2006643/","source":"ENJOY TOKYO"},
 ];
