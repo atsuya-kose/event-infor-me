@@ -3,9 +3,11 @@
 // end が null のものは終了日が未確認です。
 // categories: "family"(家族向け) / "gourmet"(グルメ要素あり) / "drink"(お酒系: ビール・日本酒・ワイン・クラフトジン等)
 // free: true=参加無料(ページに無料と書いてあるもの) / false=有料または一部有料 / 未記載=不明(ページに料金の記載なし)
-window.LAST_UPDATED = "2026-11-27";
+window.LAST_UPDATED = "2026-11-28";
 
 window.EVENTS = [
+  {"id":"ikebukuro-tamago-fes-2026","title":"卵フェスin東京2026","start":"2026-11-27","end":"2026-11-29","zone":"tokyo","area":"豊島区(池袋)","venue":"サンシャインシティ ワールドインポートマートビル4F 展示ホールA-1","price":"グルメフードフェスエリア入場無料(キャッシュオン)/卵かけごはん食べ放題は1,500円・事前予約制","categories":["family","gourmet"],"summary":"卵かけごはん食べ放題と約25ブースのグルメフードフェス。11/28・29はゲストトークショー予定。10:00〜20:00(29日は18:30閉場)。","url":"https://report.iko-yo.net/articles/33483","source":"いこーよ おでかけレポート","free":true},
+  {"id":"marunouchi-harrypotter-2026","title":"MARUNOUCHI BRIGHT HOLIDAY「ハリー・ポッター」丸の内を彩る魔法の雪","start":"2026-11-12","end":"2026-12-25","zone":"tokyo","area":"千代田区(丸の内)","venue":"丸ビル・丸の内オアゾ・新丸ビル・丸の内ブリックスクエア","price":"記載なし(公式で確認)","categories":["family"],"summary":"丸ビルのツリーなど「ハリー・ポッター」の世界観の演出、イルミネーションとクリスマスマーケット(一部コンテンツを除く)。","url":"https://www.enjoytokyo.jp/event/list/area1333/its18/","source":"ENJOY TOKYO"},
   {"id":"suginami-narita-shukakusai-2026","title":"農業公園「収穫祭」","start":"2026-11-28","end":"2026-11-28","zone":"local","area":"杉並区","venue":"成田西ふれあい農業公園(成田西3-18-9)","price":"無料(申込不要・直接会場へ)","categories":["family","gourmet"],"summary":"野菜・焼き芋・けんちん汁の販売など。10:30〜12:30。小学生以下は保護者同伴。","url":"https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf","source":"杉並区公式(広報すぎなみ11/15号)","free":true},
   {"id":"suginami-zenpukuji-pataparta-2026","title":"善福寺公園探検隊「渡り鳥」パタパタ鳥を作ろう!","start":"2026-12-06","end":"2026-12-06","zone":"local","area":"杉並区","venue":"善福寺公園","price":"1組500円(要事前申込・12/5締切・Eメール・15組・申込順)","categories":["family"],"summary":"パタパタ鳥を作る親子向け体験。3歳以上、小3以下は保護者同伴。10:00〜12:00。","url":"https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf","source":"杉並区公式(広報すぎなみ11/15号)","free":false},
   {"id":"suginami-tenmon-futago-2026","title":"すぎなみ天体観望会(ふたご座流星群)","start":"2026-12-12","end":"2026-12-13","zone":"local","area":"杉並区","venue":"コミュニティふらっと高円寺南","price":"無料(要事前申込・12/1締切・各50名・抽選)","categories":["family"],"summary":"国立天文台の講師による観望会(12/12・13の夕方)とトークイベント(12/13)。小学生以下は保護者同伴(観望会)。","url":"https://www.city.suginami.tokyo.jp/documents/30138/suginami_1115_12-15.pdf","source":"杉並区公式(広報すぎなみ11/15号)","free":true},
